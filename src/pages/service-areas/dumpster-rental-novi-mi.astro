@@ -1,0 +1,281 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuoteFormSection from '../../components/QuoteFormSection.astro';
+
+const faqSchema = [
+  {
+    "question": "Can you deliver a dumpster to a commercial job site near Twelve Oaks in Novi?",
+    "answer": "Yes! We provide same-day commercial roll-off dumpster placement for contractors, retail build-outs, and office renovations throughout Novi."
+  },
+  {
+    "question": "Are your prices flat rate in Novi?",
+    "answer": "100% flat rate! Your quoted price includes delivery, pickup, generous weight allowance, driveway protection, and 7 days on site."
+  }
+];
+---
+
+<BaseLayout
+  title="Novi MI Dumpster Rental | Remodel & Commercial Job Site Containers"
+  description="Dumpster rental in Novi, MI. Express roll-off dumpsters for lakefront home remodels, roofing & commercial jobs along Grand River. Call 888-870-9906."
+  canonical="https://dumpstersnow.com/service-areas/dumpster-rental-novi-mi/"
+  activePage="services"
+  faqSchema={faqSchema}
+  breadcrumbName="Novi Dumpster Rental"
+>
+  <section class="hero-section" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); padding: 100px 0 135px; color: white;">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="rating-badge">
+          <div class="stars">★★★★★</div>
+          <span class="rating-text">LOCAL NOVI DISPATCH | 7–12 Miles (15-Min Dispatch)</span>
+        </div>
+        <h1 class="hero-title" style="color: white; font-size: 2.5rem;">
+          Roll-Off Dumpster Rental in Novi, MI
+        </h1>
+        <p style="font-size: 1.1rem; color: #cbd5e1; margin-bottom: 20px; line-height: 1.6;">
+          Dumpsters Now provides express roll-off dumpster delivery across Novi, MI. Whether you are renovating a lakefront property near Walled Lake, updating a commercial suite near Twelve Oaks Mall, or tearing off a roof along Grand River Ave, we offer transparent flat-rate dumpsters.
+        </p>
+        <ul class="hero-features">
+          <li>
+            <div class="check-icon"><svg viewBox="0 0 32 32"><path d="M27 4l-15 15-7-7-5 5 12 12 20-20z"></path></svg></div>
+            <div>Dispatched from local Chubb Rd depot</div>
+          </li>
+          <li>
+            <div class="check-icon"><svg viewBox="0 0 32 32"><path d="M27 4l-15 15-7-7-5 5 12 12 20-20z"></path></svg></div>
+            <div>100% Driveway protection for Novi homes</div>
+          </li>
+          <li>
+            <div class="check-icon"><svg viewBox="0 0 32 32"><path d="M27 4l-15 15-7-7-5 5 12 12 20-20z"></path></svg></div>
+            <div>Flat-rate pricing with zero hidden fees</div>
+          </li>
+        </ul>
+        <div class="hero-cta-buttons" style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 25px;">
+          <a href="/book-now/" class="btn btn-green" style="font-size: 1.05rem;">Book Novi Dumpster Online</a>
+          <a href="tel:888-870-9906" class="btn btn-red" style="font-size: 1.05rem;">Call (888) 870-9906</a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <img src="/assets/images/20230605_104913.jpg" alt="Dumpsters Now roll-off dumpster delivery in Novi MI">
+      </div>
+    </div>
+  </section>
+
+  <!-- Localized Neighborhoods & Permit Info -->
+  <section style="padding: 50px 0; background: white;">
+    <div class="container" style="max-width: 1000px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+        <div style="background: var(--bg-light); border-radius: 12px; padding: 28px; border: 1px solid #e2e8f0;">
+          <h3 style="color: var(--navy-dark); font-size: 1.3rem; margin-bottom: 12px; font-weight: 800;">Novi Service Coverage</h3>
+          <p style="color: var(--text-dark); line-height: 1.6; font-size: 0.95rem;">
+            <strong>Areas Served:</strong> Twelve Oaks & Grand River Corridor, Walled Lake Waterfront Properties, Beck Road Commercial Corridor, Ten Mile & Novi Road Subdivisions.
+          </p>
+          <p style="color: var(--text-muted); margin-top: 10px; font-size: 0.88rem;">
+            <strong>Hub Distance:</strong> 7–12 Miles (15-Min Dispatch)
+          </p>
+        </div>
+
+        <div style="background: var(--bg-light); border-radius: 12px; padding: 28px; border: 1px solid #e2e8f0;">
+          <h3 style="color: var(--navy-dark); font-size: 1.3rem; margin-bottom: 12px; font-weight: 800;">Novi Dumpster Placement Guidelines</h3>
+          <p style="color: var(--text-dark); line-height: 1.6; font-size: 0.95rem;">
+            City of Novi ordinances allow driveway dumpster placement on private property without a permit. Commercial job sites along Novi Road or Grand River Avenue placing dumpsters in fire lanes or public parking lots must ensure proper cones and clearance per Novi Fire Department standards.
+          </p>
+        </div>
+      </div>
+
+      <div style="margin-top: 35px; background: #f8fafc; border-radius: 12px; padding: 25px; border: 1px solid #e2e8f0; text-align: center;">
+        <h4 style="color: var(--navy-dark); font-weight: 800; font-size: 1.15rem; margin-bottom: 8px;">Recommended Dumpster Sizes for Novi:</h4>
+        <p style="color: var(--text-dark); margin: 0; font-size: 1rem;">20-Yard for residential renovations; 30-Yard & 40-Yard for retail build-outs and commercial demolition.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Cards Grid -->
+  <section class="pricing-section" id="pricing" style="background: var(--bg-light);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Transparent Flat Rates</div>
+        <h2 class="section-title">Novi, MI Dumpster Rental Pricing</h2>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <h3 class="dumpster-size-title">15 Yard Dumpster</h3>
+            <div class="price-box">
+              <span class="price-label">Starting At</span>
+              <span class="price-value">$375</span>
+            </div>
+          </div>
+          <div class="pricing-card-img">
+            <img src="/assets/images/dumpster-card-product.png" alt="15 Yard Roll Off Dumpster in Novi MI">
+          </div>
+          <div class="pricing-card-body">
+            <div class="best-used-heading">Best Used For:</div>
+            <ul class="pricing-card-features">
+              <li>Garage & basement cleanouts</li>
+              <li>Small bathroom remodels</li>
+              <li>Yard waste & branch clearing</li>
+            </ul>
+            <a href="/book-now/" class="btn btn-green btn-block">Reserve 15-Yard →</a>
+          </div>
+        </div>
+
+        <div class="pricing-card popular-card">
+          <div class="popular-badge">Most Popular</div>
+          <div class="pricing-card-header">
+            <h3 class="dumpster-size-title">20 Yard Dumpster</h3>
+            <div class="price-box">
+              <span class="price-label">Starting At</span>
+              <span class="price-value">$425</span>
+            </div>
+          </div>
+          <div class="pricing-card-img">
+            <img src="/assets/images/dumpster-card-product.png" alt="20 Yard Roll Off Dumpster in Novi MI">
+          </div>
+          <div class="pricing-card-body">
+            <div class="best-used-heading">Best Used For:</div>
+            <ul class="pricing-card-features">
+              <li>Kitchen remodels & floor removal</li>
+              <li>Roofing tear-offs (up to 30 sq)</li>
+              <li>Multi-room deck & estate purges</li>
+            </ul>
+            <a href="/book-now/" class="btn btn-green btn-block">Reserve 20-Yard →</a>
+          </div>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <h3 class="dumpster-size-title">30 Yard Dumpster</h3>
+            <div class="price-box">
+              <span class="price-label">Starting At</span>
+              <span class="price-value">$465</span>
+            </div>
+          </div>
+          <div class="pricing-card-img">
+            <img src="/assets/images/dumpster-card-product.png" alt="30 Yard Roll Off Dumpster in Novi MI">
+          </div>
+          <div class="pricing-card-body">
+            <div class="best-used-heading">Best Used For:</div>
+            <ul class="pricing-card-features">
+              <li>Whole-house additions & renovations</li>
+              <li>Major estate cleanouts</li>
+              <li>Holds up to 12 truck loads</li>
+            </ul>
+            <a href="/book-now/" class="btn btn-green btn-block">Reserve 30-Yard →</a>
+          </div>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <h3 class="dumpster-size-title">40 Yard Dumpster</h3>
+            <div class="price-box">
+              <span class="price-label">Starting At</span>
+              <span class="price-value">$550</span>
+            </div>
+          </div>
+          <div class="pricing-card-img">
+            <img src="/assets/images/dumpster-card-product.png" alt="40 Yard Roll Off Dumpster in Novi MI">
+          </div>
+          <div class="pricing-card-body">
+            <div class="best-used-heading">Best Used For:</div>
+            <ul class="pricing-card-features">
+              <li>Commercial construction & teardowns</li>
+              <li>Industrial warehouse overhauls</li>
+              <li>Holds up to 16 truck loads</li>
+            </ul>
+            <a href="/book-now/" class="btn btn-green btn-block">Reserve 40-Yard →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alternating Feature Section 1: Image Left, Content Right -->
+  <section style="padding: 60px 0; background: white;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: center;">
+        <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+          <img src="/assets/images/dumpstersnow-real-2.jpg" alt="Dumpsters Now roll-off dumpster delivered in Novi MI" style="width: 100%; height: auto; display: block; object-fit: cover;">
+        </div>
+        <div>
+          <div class="section-subtitle">Express Commercial & Retail Dispatch</div>
+          <h2 class="section-title" style="font-size: 2rem; margin-bottom: 15px;">Fast Dumpster Delivery Along Grand River & Twelve Oaks</h2>
+          <p style="color: var(--text-dark); line-height: 1.7; font-size: 1.05rem; margin-bottom: 20px;">
+            Contractors and business owners across Novi rely on Dumpsters Now for fast roll-off container delivery. From retail store build-outs near Twelve Oaks to office strip-outs along Beck Road, we keep your job site clean and compliant.
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 0 0 25px 0;">
+            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-weight: 600; color: var(--navy-dark);"><span style="color: var(--primary-green); font-weight: 800; font-size: 1.2rem;">✓</span> Heavy-duty 20, 30, and 40-yard commercial roll-off dumpsters</li>
+            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-weight: 600; color: var(--navy-dark);"><span style="color: var(--primary-green); font-weight: 800; font-size: 1.2rem;">✓</span> Priority dispatch within 15 minutes of our Northville fleet hub</li>
+            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-weight: 600; color: var(--navy-dark);"><span style="color: var(--primary-green); font-weight: 800; font-size: 1.2rem;">✓</span> Dedicated account support for multi-container job site swaps</li>
+          </ul>
+          <a href="/book-now/" class="btn btn-red">Reserve Novi Commercial Dumpster →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alternating Feature Section 2: Content Left, Image Right -->
+  <section style="padding: 60px 0; background: var(--bg-light);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: center;">
+        <div>
+          <div class="section-subtitle">Walled Lake Residential Remodels</div>
+          <h2 class="section-title" style="font-size: 2rem; margin-bottom: 15px;">Compact Roll-Offs Tailored for Novi Waterfront Properties</h2>
+          <p style="color: var(--text-dark); line-height: 1.7; font-size: 1.05rem; margin-bottom: 20px;">
+            Renovating a home near Walled Lake or Ten Mile Road? Tight residential driveways and narrow access roads require precise dumpster placement.
+          </p>
+          <p style="color: var(--text-dark); line-height: 1.7; font-size: 1.05rem; margin-bottom: 25px;">
+            Our experienced local drivers maneuver compact 15-yard and 20-yard containers into place smoothly, safeguarding your property with protective wooden skids.
+          </p>
+          <a href="/book-now/" class="btn btn-green">Reserve Your Dumpster Online →</a>
+        </div>
+        <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+          <img src="/assets/images/dumpstersnow-real-3.jpg" alt="Roll off dumpster placement in Novi MI" style="width: 100%; height: auto; display: block; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Local FAQs -->
+  <section class="faq-section" style="padding: 60px 0; background: white;">
+    <div class="container" style="max-width: 900px;">
+      <div class="section-header">
+        <h2 class="section-title">Novi, MI Dumpster Rental FAQs</h2>
+      </div>
+      <div class="faq-grid" style="grid-template-columns: 1fr;">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can you deliver a dumpster to a commercial job site near Twelve Oaks in Novi?</span>
+              <svg class="faq-icon" viewBox="0 0 32 32"><path d="M16.609 22.389c-0.37 0.37-0.97 0.37-1.34 0l-9.659-9.659c-0.37-0.37-0.37-0.97 0-1.34l0.447-0.447c0.37-0.37 0.97-0.37 1.34 0l8.542 8.542 8.542-8.542c0.37-0.37 0.97-0.37 1.34 0l0.447 0.447c0.37 0.37 0.37 0.97 0 1.34l-9.659 9.659z"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Yes! We provide same-day commercial roll-off dumpster placement for contractors, retail build-outs, and office renovations throughout Novi.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Are your prices flat rate in Novi?</span>
+              <svg class="faq-icon" viewBox="0 0 32 32"><path d="M16.609 22.389c-0.37 0.37-0.97 0.37-1.34 0l-9.659-9.659c-0.37-0.37-0.37-0.97 0-1.34l0.447-0.447c0.37-0.37 0.97-0.37 1.34 0l8.542 8.542 8.542-8.542c0.37-0.37 0.97-0.37 1.34 0l0.447 0.447c0.37 0.37 0.37 0.97 0 1.34l-9.659 9.659z"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                100% flat rate! Your quoted price includes delivery, pickup, generous weight allowance, driveway protection, and 7 days on site.
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Sitewide Quote Form Component -->
+  <QuoteFormSection
+    cityName="Novi"
+    subtitle="NEED A DUMPSTER IN NOVI?"
+    title="GET FAST LOCAL DELIVERY TODAY"
+    description="Lock in your flat-rate dumpster price with zero weight surprises and driveway-safe delivery across Novi, MI."
+    defaultCity="Novi"
+  />
+</BaseLayout>

@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuoteFormSection from '../../components/QuoteFormSection.astro';
+
+const cities = [
+  {
+    name: "Northville, MI",
+    slug: "dumpster-rental-northville-mi",
+    description: "Home of our main dispatch depot at 7374 Chubb Rd. Express 2-hour delivery to Historic Northville & Northville Township.",
+    distance: "0-5 miles (Main Hub)",
+    popularSize: "20-Yard & 30-Yard"
+  },
+  {
+    name: "Plymouth, MI",
+    slug: "dumpster-rental-plymouth-mi",
+    description: "Driveway-safe roll-off dumpsters for Downtown Plymouth, Old Village, and Plymouth Township neighborhoods.",
+    distance: "5-10 miles",
+    popularSize: "15-Yard & 20-Yard"
+  },
+  {
+    name: "Livonia, MI",
+    slug: "dumpster-rental-livonia-mi",
+    description: "Flat-rate dumpster rentals for Livonia residential remodels and commercial industrial projects along I-96.",
+    distance: "8-12 miles",
+    popularSize: "20-Yard & 30-Yard"
+  },
+  {
+    name: "Canton, MI",
+    slug: "dumpster-rental-canton-mi",
+    description: "HOA-compliant roll-off containers with driveway protection for Canton Township subdivisions along Ford Rd.",
+    distance: "10-14 miles",
+    popularSize: "20-Yard & 30-Yard"
+  },
+  {
+    name: "Novi, MI",
+    slug: "dumpster-rental-novi-mi",
+    description: "Express delivery for lakefront renovations near Walled Lake and retail developments along Grand River Ave.",
+    distance: "7-12 miles",
+    popularSize: "20-Yard & 40-Yard"
+  },
+  {
+    name: "Westland, MI",
+    slug: "dumpster-rental-westland-mi",
+    description: "Affordable flat-rate dumpster rentals for garage purges, roofing tear-offs, and home cleanouts in Westland.",
+    distance: "12-16 miles",
+    popularSize: "15-Yard & 20-Yard"
+  },
+  {
+    name: "Detroit, MI",
+    slug: "dumpster-rental-detroit-mi",
+    description: "Heavy-duty roll-off containers for historic home restorations in Corktown & Midtown, plus commercial job sites.",
+    distance: "20-25 miles",
+    popularSize: "30-Yard & 40-Yard"
+  }
+];
+
+const faqSchema = [
+  {
+    question: "Where is Dumpsters Now located?",
+    answer: "Our main fleet dispatch depot is located at 7374 Chubb Rd, Northville, MI 48168. We service all of Wayne County, Oakland County, Washtenaw County, and surrounding Metro Detroit communities."
+  },
+  {
+    question: "Do I need a permit for a dumpster in Metro Detroit?",
+    answer: "Placing a dumpster on private property (like your driveway) in most Metro Detroit municipalities requires no permits. If you need to place the dumpster on a public street or right-of-way, local city DPW permits may be required depending on the city."
+  }
+];
+---
+
+<BaseLayout
+  title="Metro Detroit Service Areas | Roll-Off Dumpster Rental | Dumpsters Now"
+  description="Local roll-off dumpster rentals across Metro Detroit including Northville, Plymouth, Livonia, Canton, Novi, Westland & Detroit. Call 888-870-9906."
+  canonical="https://dumpstersnow.com/service-areas/"
+  activePage="services"
+  faqSchema={faqSchema}
+  breadcrumbName="Service Areas"
+>
+  <section class="hero-section" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); padding: 100px 0 135px; color: white;">
+    <div class="container text-center">
+      <div class="rating-badge" style="justify-content: center; margin-bottom: 15px;">
+        <div class="stars">★★★★★</div>
+        <span class="rating-text">LOCAL METRO DETROIT DISPATCH DEPOT</span>
+      </div>
+      <h1 class="hero-title" style="color: white; font-size: 2.6rem; max-width: 900px; margin: 0 auto 20px;">
+        Dumpster Rental Service Areas Across Metro Detroit
+      </h1>
+      <p style="font-size: 1.15rem; color: #cbd5e1; max-width: 750px; margin: 0 auto 25px;">
+        Dispatched directly from our primary depot at <strong>7374 Chubb Rd, Northville, MI</strong>. Fast, reliable 15, 20, 30, and 40-yard roll-off dumpsters delivered on your schedule with zero surprise fees.
+      </p>
+      <a href="tel:888-870-9906" class="btn btn-red" style="font-size: 1.1rem; padding: 14px 28px;">Call For Fast Local Dispatch: (888) 870-9906</a>
+    </div>
+  </section>
+
+  <section style="padding: 60px 0; background: var(--bg-light);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Local Communities We Serve</div>
+        <h2 class="section-title">Select Your City for Local Permit Info & Pricing</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-top: 35px;">
+        {cities.map((city) => (
+          <div style="background: white; border-radius: 12px; padding: 30px; border: 1px solid var(--border-color); box-shadow: 0 4px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <h3 style="font-size: 1.35rem; color: var(--navy-dark); font-weight: 800; margin: 0;">{city.name}</h3>
+                <span style="background: #e2e8f0; color: #334155; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px;">{city.distance}</span>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 18px;">{city.description}</p>
+              <div style="font-size: 0.85rem; color: var(--text-dark); margin-bottom: 20px;">
+                <strong>Popular Sizes:</strong> {city.popularSize}
+              </div>
+            </div>
+            <a href={`/service-areas/${city.slug}/`} class="btn btn-green" style="text-align: center; width: 100%; display: block;">View {city.name} Pricing & Info →</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <QuoteFormSection />
+</BaseLayout>

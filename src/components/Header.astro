@@ -1,0 +1,54 @@
+---
+interface Props {
+  activePage?: string;
+}
+
+const { activePage = 'home' } = Astro.props;
+---
+
+<header class="header">
+  <div class="container header-container">
+    <a href="/" class="logo-link">
+      <img src="/assets/images/dumpster-now-logo.png" alt="Dumpsters Now Logo" style="max-height: 52px; width: auto; object-fit: contain;">
+    </a>
+
+    <nav class="nav-menu" id="navMenu">
+      <a href="/" class={`nav-link ${activePage === 'home' ? 'active' : ''}`}>Home</a>
+      <div class="nav-item">
+        <a href="/services/" class={`nav-link ${activePage === 'services' ? 'active' : ''}`}>Services ▾</a>
+        <div class="dropdown-menu">
+          <a href="/residential-dumpster-rentals/" class="dropdown-item">Residential Dumpster Rentals</a>
+          <a href="/commercial-dumpster-rentals/" class="dropdown-item">Commercial Dumpster Rentals</a>
+          <a href="/construction-debris-removal/" class="dropdown-item">Construction Debris Removal</a>
+          <a href="/yard-debris-dumpster-rental/" class="dropdown-item">Yard Debris Dumpster Rental</a>
+          <a href="/junk-removal-dumpsters/" class="dropdown-item">Junk Removal Dumpster Rental</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="/service-areas/" class={`nav-link ${activePage === 'service-areas' ? 'active' : ''}`}>Service Areas ▾</a>
+        <div class="dropdown-menu">
+          <a href="/service-areas/" class="dropdown-item" style="font-weight: 700; color: var(--primary-orange);">All Service Areas Overview</a>
+          <a href="/service-areas/dumpster-rental-northville-mi/" class="dropdown-item">Northville, MI</a>
+          <a href="/service-areas/dumpster-rental-plymouth-mi/" class="dropdown-item">Plymouth, MI</a>
+          <a href="/service-areas/dumpster-rental-livonia-mi/" class="dropdown-item">Livonia, MI</a>
+          <a href="/service-areas/dumpster-rental-canton-mi/" class="dropdown-item">Canton, MI</a>
+          <a href="/service-areas/dumpster-rental-novi-mi/" class="dropdown-item">Novi, MI</a>
+          <a href="/service-areas/dumpster-rental-westland-mi/" class="dropdown-item">Westland, MI</a>
+          <a href="/service-areas/dumpster-rental-detroit-mi/" class="dropdown-item">Detroit, MI</a>
+        </div>
+      </div>
+      <a href="/pricing-and-sizes/" class={`nav-link ${activePage === 'pricing' ? 'active' : ''}`}>Pricing & Sizes</a>
+      <a href="/blog/" class={`nav-link ${activePage === 'blog' ? 'active' : ''}`}>Blog</a>
+    </nav>
+
+    <div class="header-cta">
+      <a href="/book-now/" class="btn btn-green">Book Online Now</a>
+      <a href="tel:888-870-9906" class="btn btn-red">Click To Call Us</a>
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
