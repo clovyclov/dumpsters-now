@@ -4,6 +4,8 @@ import QuoteFormSection from '../../components/QuoteFormSection.astro';
 import TestimonialSlider from '../../components/TestimonialSlider.astro';
 import cities from '../../data/cities.json';
 
+import pricingData from '../../data/pricing.json';
+
 export async function getStaticPaths() {
   return cities.map((city) => ({
     params: { city: city.slug },
@@ -96,94 +98,30 @@ const { city } = Astro.props;
       </div>
 
       <div class="pricing-grid">
-        <div class="pricing-card">
-          <div class="pricing-card-header">
-            <h3 class="dumpster-size-title">15 Yard Dumpster</h3>
-            <div class="price-box">
-              <span class="price-label">Starting At</span>
-              <span class="price-value">$375</span>
+        {pricingData.sizes.map((item) => (
+          <div class={`pricing-card ${item.popular ? 'popular-card' : ''}`}>
+            {item.popular && <div class="popular-badge">Most Popular</div>}
+            <div class="pricing-card-header">
+              <h3 class="dumpster-size-title">{item.name}</h3>
+              <div class="price-box">
+                <span class="price-label">Starting At</span>
+                <span class="price-value">{item.formattedPrice}</span>
+              </div>
+            </div>
+            <div class="pricing-card-img">
+              <img src={item.image} alt={`${item.name} in ${city.cityName} MI`} loading="lazy" decoding="async">
+            </div>
+            <div class="pricing-card-body">
+              <div class="best-used-heading">Best Used For:</div>
+              <ul class="pricing-card-features">
+                {item.bestFor.map((feature) => (
+                  <li>{feature}</li>
+                ))}
+              </ul>
+              <a href="/book-now/" class="btn btn-green btn-block">Reserve {item.name.replace(' Dumpster', '')} →</a>
             </div>
           </div>
-          <div class="pricing-card-img">
-            <img src="/assets/images/dumpster-card-product.webp" alt={`15 Yard Roll Off Dumpster in ${city.cityName} MI`} loading="lazy" decoding="async">
-          </div>
-          <div class="pricing-card-body">
-            <div class="best-used-heading">Best Used For:</div>
-            <ul class="pricing-card-features">
-              <li>Garage & basement cleanouts</li>
-              <li>Small bathroom remodels</li>
-              <li>Yard waste & branch clearing</li>
-            </ul>
-            <a href="/book-now/" class="btn btn-green btn-block">Reserve 15-Yard →</a>
-          </div>
-        </div>
-
-        <div class="pricing-card popular-card">
-          <div class="popular-badge">Most Popular</div>
-          <div class="pricing-card-header">
-            <h3 class="dumpster-size-title">20 Yard Dumpster</h3>
-            <div class="price-box">
-              <span class="price-label">Starting At</span>
-              <span class="price-value">$425</span>
-            </div>
-          </div>
-          <div class="pricing-card-img">
-            <img src="/assets/images/dumpster-card-product.webp" alt={`20 Yard Roll Off Dumpster in ${city.cityName} MI`} loading="lazy" decoding="async">
-          </div>
-          <div class="pricing-card-body">
-            <div class="best-used-heading">Best Used For:</div>
-            <ul class="pricing-card-features">
-              <li>Kitchen remodels & floor removal</li>
-              <li>Roofing tear-offs (up to 30 sq)</li>
-              <li>Multi-room deck & estate purges</li>
-            </ul>
-            <a href="/book-now/" class="btn btn-green btn-block">Reserve 20-Yard →</a>
-          </div>
-        </div>
-
-        <div class="pricing-card">
-          <div class="pricing-card-header">
-            <h3 class="dumpster-size-title">30 Yard Dumpster</h3>
-            <div class="price-box">
-              <span class="price-label">Starting At</span>
-              <span class="price-value">$465</span>
-            </div>
-          </div>
-          <div class="pricing-card-img">
-            <img src="/assets/images/dumpster-card-product.webp" alt={`30 Yard Roll Off Dumpster in ${city.cityName} MI`} loading="lazy" decoding="async">
-          </div>
-          <div class="pricing-card-body">
-            <div class="best-used-heading">Best Used For:</div>
-            <ul class="pricing-card-features">
-              <li>Whole-house additions & renovations</li>
-              <li>Major estate cleanouts</li>
-              <li>Holds up to 12 truck loads</li>
-            </ul>
-            <a href="/book-now/" class="btn btn-green btn-block">Reserve 30-Yard →</a>
-          </div>
-        </div>
-
-        <div class="pricing-card">
-          <div class="pricing-card-header">
-            <h3 class="dumpster-size-title">40 Yard Dumpster</h3>
-            <div class="price-box">
-              <span class="price-label">Starting At</span>
-              <span class="price-value">$550</span>
-            </div>
-          </div>
-          <div class="pricing-card-img">
-            <img src="/assets/images/dumpster-card-product.webp" alt={`40 Yard Roll Off Dumpster in ${city.cityName} MI`} loading="lazy" decoding="async">
-          </div>
-          <div class="pricing-card-body">
-            <div class="best-used-heading">Best Used For:</div>
-            <ul class="pricing-card-features">
-              <li>Commercial construction & teardowns</li>
-              <li>Industrial warehouse overhauls</li>
-              <li>Holds up to 16 truck loads</li>
-            </ul>
-            <a href="/book-now/" class="btn btn-green btn-block">Reserve 40-Yard →</a>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   </section>

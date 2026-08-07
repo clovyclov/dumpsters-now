@@ -1,0 +1,68 @@
+{
+  "sizes": [
+    {
+      "id": "15-yard",
+      "name": "15 Yard Dumpster",
+      "price": 375,
+      "formattedPrice": "$375",
+      "popular": false,
+      "image": "/assets/images/dumpster-card-product.webp",
+      "dimensions": "17' L × 7' W × 3.5' H",
+      "weightAllowance": "2 Tons (4,000 lbs)",
+      "truckLoads": "~6 Pickup Truck Loads",
+      "bestFor": [
+        "Garage & basement cleanouts",
+        "Small bathroom remodels",
+        "Yard waste & branch clearing"
+      ]
+    },
+    {
+      "id": "20-yard",
+      "name": "20 Yard Dumpster",
+      "price": 425,
+      "formattedPrice": "$425",
+      "popular": true,
+      "image": "/assets/images/dumpster-card-product.webp",
+      "dimensions": "18' L × 7' W × 4.5' H",
+      "weightAllowance": "3 Tons (6,000 lbs)",
+      "truckLoads": "~8 Pickup Truck Loads",
+      "bestFor": [
+        "Kitchen remodels & floor removal",
+        "Roofing tear-offs (up to 30 sq)",
+        "Multi-room deck & estate purges"
+      ]
+    },
+    {
+      "id": "30-yard",
+      "name": "30 Yard Dumpster",
+      "price": 465,
+      "formattedPrice": "$465",
+      "popular": false,
+      "image": "/assets/images/dumpster-card-product.webp",
+      "dimensions": "19' L × 7' W × 7' H",
+      "weightAllowance": "4 Tons (8,000 lbs)",
+      "truckLoads": "~12 Pickup Truck Loads",
+      "bestFor": [
+        "Whole-house additions & renovations",
+        "Major estate cleanouts",
+        "Holds up to 12 truck loads"
+      ]
+    },
+    {
+      "id": "40-yard",
+      "name": "40 Yard Dumpster",
+      "price": 550,
+      "formattedPrice": "$550",
+      "popular": false,
+      "image": "/assets/images/dumpster-card-product.webp",
+      "dimensions": "20' L × 7' W × 8' H",
+      "weightAllowance": "5 Tons (10,000 lbs)",
+      "truckLoads": "~16 Pickup Truck Loads",
+      "bestFor": [
+        "Commercial construction & teardowns",
+        "Industrial warehouse overhauls",
+        "Holds up to 16 truck loads"
+      ]
+    }
+  ]
+}
