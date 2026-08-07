@@ -1,0 +1,248 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuoteFormSection from '../../components/QuoteFormSection.astro';
+import TestimonialSlider from '../../components/TestimonialSlider.astro';
+import cities from '../../data/cities.json';
+
+export async function getStaticPaths() {
+  return cities.map((city) => ({
+    params: { city: city.slug },
+    props: { city },
+  }));
+}
+
+const { city } = Astro.props;
+---
+
+<BaseLayout
+  title={city.metaTitle}
+  description={city.metaDescription}
+  canonical={`https://dumpstersnow.com/service-areas/${city.slug}/`}
+  activePage="service-areas"
+>
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="banner-pill">{city.heroSub}</span>
+
+        <h1 class="hero-title">
+          {city.heroTitle}
+        </h1>
+
+        <p style="font-size:1.15rem; color:#e2e8f0; margin-bottom:25px;">
+          {city.heroDesc}
+        </p>
+
+        <ul class="hero-features">
+          <li>
+            <div class="check-icon"><svg viewBox="0 0 32 32"><path d="M27 4l-15 15-7-7-5 5 12 12 20-20z"/></svg></div>
+            Driveway protection wood boards placed on all {city.cityName} deliveries
+          </li>
+          <li>
+            <div class="check-icon"><svg viewBox="0 0 32 32"><path d="M27 4l-15 15-7-7-5 5 12 12 20-20z"/></svg></div>
+            Same-day & next-day dispatch across {city.cityName}, {city.state}
+          </li>
+          <li>
+            <div class="check-icon"><svg viewBox="0 0 32 32"><path d="M27 4l-15 15-7-7-5 5 12 12 20-20z"/></svg></div>
+            Transparent flat rates with zero surprise weight or environmental fees
+          </li>
+        </ul>
+
+        <a href="#pricing" class="btn btn-red">View {city.cityName} Rates & Sizes</a>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <img src="/assets/images/20230605_104913.webp" alt={`Roll-Off Dumpster Rental Delivery in ${city.cityName} MI`} loading="lazy" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LOCAL NEIGHBORHOODS & PERMIT INFO ==================== -->
+  <section style="padding: 50px 0; background: white;">
+    <div class="container" style="max-width: 1000px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+        <div style="background: var(--bg-light); border-radius: 12px; padding: 28px; border: 1px solid #e2e8f0;">
+          <h3 style="color: var(--navy-dark); font-size: 1.3rem; margin-bottom: 12px; font-weight: 800;">{city.cityName} Service Coverage</h3>
+          <p style="color: var(--text-dark); line-height: 1.6; font-size: 0.95rem;">
+            <strong>Areas Served:</strong> {city.neighborhoods}
+          </p>
+          <p style="color: var(--text-muted); margin-top: 10px; font-size: 0.88rem;">
+            <strong>Hub Distance:</strong> {city.hubDistance}
+          </p>
+        </div>
+
+        <div style="background: var(--bg-light); border-radius: 12px; padding: 28px; border: 1px solid #e2e8f0;">
+          <h3 style="color: var(--navy-dark); font-size: 1.3rem; margin-bottom: 12px; font-weight: 800;">{city.cityName} Ordinance & Placement Rules</h3>
+          <p style="color: var(--text-dark); line-height: 1.6; font-size: 0.95rem;">
+            {city.permitInfo}
+          </p>
+        </div>
+      </div>
+
+      <div style="margin-top: 35px; background: #f8fafc; border-radius: 12px; padding: 25px; border: 1px solid #e2e8f0; text-align: center;">
+        <h4 style="color: var(--navy-dark); font-weight: 800; font-size: 1.15rem; margin-bottom: 8px;">Recommended Dumpster Sizes for {city.cityName}:</h4>
+        <p style="color: var(--text-dark); margin: 0; font-size: 1rem;">{city.recommendedSizes}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRICING CARDS GRID ==================== -->
+  <section class="pricing-section" id="pricing" style="background: var(--bg-light);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Transparent Flat Rates</div>
+        <h2 class="section-title">{city.cityName}, MI Dumpster Rental Pricing</h2>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <h3 class="dumpster-size-title">15 Yard Dumpster</h3>
+            <div class="price-box">
+              <span class="price-label">Starting At</span>
+              <span class="price-value">$375</span>
+            </div>
+          </div>
+          <div class="pricing-card-img">
+            <img src="/assets/images/dumpster-card-product.webp" alt={`15 Yard Roll Off Dumpster in ${city.cityName} MI`} loading="lazy" decoding="async">
+          </div>
+          <div class="pricing-card-body">
+            <div class="best-used-heading">Best Used For:</div>
+            <ul class="pricing-card-features">
+              <li>Garage & basement cleanouts</li>
+              <li>Small bathroom remodels</li>
+              <li>Yard waste & branch clearing</li>
+            </ul>
+            <a href="/book-now/" class="btn btn-green btn-block">Reserve 15-Yard →</a>
+          </div>
+        </div>
+
+        <div class="pricing-card popular-card">
+          <div class="popular-badge">Most Popular</div>
+          <div class="pricing-card-header">
+            <h3 class="dumpster-size-title">20 Yard Dumpster</h3>
+            <div class="price-box">
+              <span class="price-label">Starting At</span>
+              <span class="price-value">$425</span>
+            </div>
+          </div>
+          <div class="pricing-card-img">
+            <img src="/assets/images/dumpster-card-product.webp" alt={`20 Yard Roll Off Dumpster in ${city.cityName} MI`} loading="lazy" decoding="async">
+          </div>
+          <div class="pricing-card-body">
+            <div class="best-used-heading">Best Used For:</div>
+            <ul class="pricing-card-features">
+              <li>Kitchen remodels & floor removal</li>
+              <li>Roofing tear-offs (up to 30 sq)</li>
+              <li>Multi-room deck & estate purges</li>
+            </ul>
+            <a href="/book-now/" class="btn btn-green btn-block">Reserve 20-Yard →</a>
+          </div>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <h3 class="dumpster-size-title">30 Yard Dumpster</h3>
+            <div class="price-box">
+              <span class="price-label">Starting At</span>
+              <span class="price-value">$465</span>
+            </div>
+          </div>
+          <div class="pricing-card-img">
+            <img src="/assets/images/dumpster-card-product.webp" alt={`30 Yard Roll Off Dumpster in ${city.cityName} MI`} loading="lazy" decoding="async">
+          </div>
+          <div class="pricing-card-body">
+            <div class="best-used-heading">Best Used For:</div>
+            <ul class="pricing-card-features">
+              <li>Whole-house additions & renovations</li>
+              <li>Major estate cleanouts</li>
+              <li>Holds up to 12 truck loads</li>
+            </ul>
+            <a href="/book-now/" class="btn btn-green btn-block">Reserve 30-Yard →</a>
+          </div>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <h3 class="dumpster-size-title">40 Yard Dumpster</h3>
+            <div class="price-box">
+              <span class="price-label">Starting At</span>
+              <span class="price-value">$550</span>
+            </div>
+          </div>
+          <div class="pricing-card-img">
+            <img src="/assets/images/dumpster-card-product.webp" alt={`40 Yard Roll Off Dumpster in ${city.cityName} MI`} loading="lazy" decoding="async">
+          </div>
+          <div class="pricing-card-body">
+            <div class="best-used-heading">Best Used For:</div>
+            <ul class="pricing-card-features">
+              <li>Commercial construction & teardowns</li>
+              <li>Industrial warehouse overhauls</li>
+              <li>Holds up to 16 truck loads</li>
+            </ul>
+            <a href="/book-now/" class="btn btn-green btn-block">Reserve 40-Yard →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ALTERNATING FEATURE SPLIT SECTION 1 ==================== -->
+  <section style="padding: 60px 0; background: white;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: center;">
+        <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+          <img src={city.feature1Img} alt={`Dumpsters Now roll-off dumpster delivered in ${city.cityName} MI`} style="width: 100%; height: auto; display: block; object-fit: cover;" loading="lazy" decoding="async">
+        </div>
+        <div>
+          <div class="section-subtitle">{city.feature1Sub}</div>
+          <h2 class="section-title" style="font-size: 2rem; margin-bottom: 15px;">{city.feature1Title}</h2>
+          <p style="color: var(--text-dark); line-height: 1.7; font-size: 1.05rem; margin-bottom: 20px;">
+            {city.feature1Desc}
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 0 0 25px 0;">
+            {city.feature1Bullets.map(bullet => (
+              <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-weight: 600; color: var(--navy-dark);">
+                <span style="color: var(--primary-green); font-weight: 800; font-size: 1.2rem;">✓</span> {bullet}
+              </li>
+            ))}
+          </ul>
+          <a href="tel:888-870-9906" class="btn btn-red">Call {city.cityName} Dispatch: (888) 870-9906</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ALTERNATING FEATURE SPLIT SECTION 2 ==================== -->
+  <section style="padding: 60px 0; background: var(--bg-light);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: center;">
+        <div>
+          <div class="section-subtitle">{city.feature2Sub}</div>
+          <h2 class="section-title" style="font-size: 2rem; margin-bottom: 15px;">{city.feature2Title}</h2>
+          <p style="color: var(--text-dark); line-height: 1.7; font-size: 1.05rem; margin-bottom: 20px;">
+            {city.feature2Desc}
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 0 0 25px 0;">
+            {city.feature2Bullets.map(bullet => (
+              <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-weight: 600; color: var(--navy-dark);">
+                <span style="color: var(--primary-green); font-weight: 800; font-size: 1.2rem;">✓</span> {bullet}
+              </li>
+            ))}
+          </ul>
+          <a href="#get-started" class="btn btn-green">Reserve {city.cityName} Dumpster →</a>
+        </div>
+        <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+          <img src={city.feature2Img} alt={`Dumpsters Now delivery truck in ${city.cityName} MI`} style="width: 100%; height: auto; display: block; object-fit: cover;" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS ==================== -->
+  <TestimonialSlider />
+
+  <!-- ==================== QUOTE FORM ==================== -->
+  <QuoteFormSection cityName={city.cityName} defaultCity={city.cityName} />
+</BaseLayout>
