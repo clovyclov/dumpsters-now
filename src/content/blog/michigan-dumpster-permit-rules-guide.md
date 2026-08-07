@@ -3,7 +3,7 @@ title: "Do You Need a Dumpster Permit in Metro Detroit? City-by-City Rules Guide
 description: "Do you need a city permit to park a roll-off dumpster on your street or driveway in Northville, Detroit, Royal Oak, Troy, or Plymouth? Learn local municipal rules and avoid fines."
 pubDate: 2026-08-05T12:00:00.000Z
 author: "Dumpsters Now Team"
-heroImage: "/assets/images/20230605_104913.jpg"
+heroImage: "/assets/images/20230605_104913.webp"
 category: "Permits & Guidelines"
 excerpt: "Learn local municipal rules for parking roll-off dumpsters on driveways vs public streets across Wayne, Oakland, and Macomb counties."
 ---

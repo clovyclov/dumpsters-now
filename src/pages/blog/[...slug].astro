@@ -1,23 +1,25 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import DumpsterSizeCalculator from '../../components/DumpsterSizeCalculator.astro';
+import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-  const posts = await Astro.glob('../../../content/posts/*.md');
-  return posts.map((post) => {
-    const slug = post.file.split('/').pop()?.replace('.md', '') || '';
-    return {
-      params: { slug },
-      props: { post },
-    };
+  const posts = await getCollection('blog', ({ data }) => {
+    const postDate = new Date(data.pubDate);
+    return postDate <= new Date();
   });
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
 }
 
 const { post } = Astro.props;
-const { Content } = post;
-const { title, description, pubDate, author, heroImage, category } = post.frontmatter;
+const { Content } = await post.render();
+const { title, description, pubDate, author, heroImage, category } = post.data;
 
-function formatDate(dateStr: string) {
+function formatDate(dateStr: string | Date) {
   const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
   return new Date(dateStr).toLocaleDateString('en-US', options);
 }
@@ -26,7 +28,7 @@ function formatDate(dateStr: string) {
 <BaseLayout
   title={`${title} | Dumpsters Now Blog`}
   description={description}
-  canonical={`https://dumpstersnow.com/blog/${Astro.params.slug}/`}
+  canonical={`https://dumpstersnow.com/blog/${post.slug}/`}
   activePage="blog"
 >
   <!-- Schema.org JSON-LD Article Data & FAQ Schema -->
@@ -39,7 +41,7 @@ function formatDate(dateStr: string) {
     "datePublished": pubDate,
     "author": {
       "@type": "Person",
-      "name": author || "Moe Sarsour",
+      "name": author && author !== "Dumpsters Now Team" ? author : "Hysam Hammad",
       "jobTitle": "Owner & Operations Director",
       "worksFor": {
         "@type": "LocalBusiness",
@@ -78,7 +80,7 @@ function formatDate(dateStr: string) {
         <span>•</span>
         <span>{formatDate(pubDate)}</span>
         <span>•</span>
-        <span>By {author || 'Moe Sarsour (Owner & Operations Director)'}</span>
+        <span>By {author && author !== "Dumpsters Now Team" ? author : 'Hysam Hammad (Owner & Operations Director)'}</span>
       </div>
 
       {heroImage && (
@@ -98,13 +100,13 @@ function formatDate(dateStr: string) {
       <!-- Owner Author Bio Card -->
       <div style="background: #ffffff; border: 3.5px solid #000000; box-shadow: 6px 6px 0px #000000; border-radius: var(--radius-lg); padding: 25px; margin-top: 50px; display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
         <div style="width: 80px; height: 80px; border-radius: 50%; overflow: hidden; border: 2.5px solid #000; flex-shrink: 0; background: var(--bg-cream);">
-          <img src="/assets/images/testimonial-owner.webp" alt="Moe Sarsour - Owner Dumpsters Now" style="width: 100%; height: 100%; object-fit: cover;"  loading="lazy" decoding="async" />
+          <img src="/assets/images/testimonial-owner.webp" alt="Hysam Hammad - Owner Dumpsters Now" style="width: 100%; height: 100%; object-fit: cover;"  loading="lazy" decoding="async" />
         </div>
         <div style="flex: 1; min-width: 240px;">
           <div style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase; color: var(--primary-red); letter-spacing: 0.5px;">Article Author & Local Dispatch Manager</div>
-          <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--text-dark); margin: 4px 0 8px;">Moe Sarsour</h4>
+          <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--text-dark); margin: 4px 0 8px;">Hysam Hammad</h4>
           <p style="font-size: 0.95rem; color: #475569; margin: 0; line-height: 1.5;">
-            Moe is the owner and operations director of <strong>Dumpsters Now</strong>. He personally manages dumpster dispatching across Wayne, Oakland, and Macomb counties, ensuring every customer gets driveway-safe delivery with zero hidden fees.
+            Hysam is the owner and operations director of <strong>Dumpsters Now</strong>. He personally manages dumpster dispatching across Wayne, Oakland, and Macomb counties, ensuring every customer gets driveway-safe delivery with zero hidden fees.
           </p>
         </div>
       </div>
