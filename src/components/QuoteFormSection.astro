@@ -38,7 +38,10 @@ const {
     </div>
 
     <div class="quote-form-card">
-      <div class="stars" style="color:var(--star-gold); margin-bottom:10px;">★★★★★</div>
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+        <div class="stars" style="color:var(--star-gold); font-size:1.05rem;">★★★★★</div>
+        <span style="font-size:0.85rem; font-weight:800; color:var(--text-dark); text-transform:uppercase; letter-spacing:0.5px;">5.0 Rating (138+ Google Reviews)</span>
+      </div>
       <h3>One Flat Price. No Hidden Fees. No Weight Surprises.</h3>
       <p>Lock in your flat-rate delivery date. Same-day & next-day dispatch available across Wayne, Oakland, and Macomb counties.</p>
 
@@ -114,6 +117,17 @@ const {
         <button type="submit" class="btn btn-green btn-block" style="padding:16px; margin-top:25px; font-size:1rem;">
           {cityName ? `Get ${cityName} Dumpster Rental Quote` : `Get Your Dumpster Rental Quote`}
         </button>
+
+        <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:12px; margin-top:16px; padding-top:16px; border-top:1px solid #e2e8f0; text-align:left;">
+          <div style="display:flex; align-items:center; gap:8px; font-size:0.82rem; font-weight:700; color:#334155;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Driveway Protection Guarantee</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px; font-size:0.82rem; font-weight:700; color:#334155;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f79e4a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <span>Same-Day Delivery Available</span>
+          </div>
+        </div>
       </form>
     </div>
   </div>
