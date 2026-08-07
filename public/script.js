@@ -244,6 +244,21 @@ function initQuoteForm() {
         submitted_at: new Date().toISOString()
       };
 
+      // Enhanced Conversions: Push customer data to GTM dataLayer safely
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'lead_form_submitted',
+        'user_data': {
+          'email': emailVal,
+          'phone_number': phoneVal,
+          'address': {
+            'first_name': firstName,
+            'last_name': lastName,
+            'city': cityVal
+          }
+        }
+      });
+
       const doRedirect = () => {
         const currentUrl = window.location.href.toLowerCase();
 
