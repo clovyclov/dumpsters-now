@@ -1,0 +1,128 @@
+{
+  "name": "Dumpsters Now - Autonomous Local SEO Blog Engine",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 9 * * 2,5"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "schedule-trigger",
+      "name": "Schedule Trigger (Tue & Fri 9am)"
+    },
+    {
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "\nconst topics = [\n  {\n    city: \"Canton\",\n    county: \"Wayne County\",\n    corridors: \"Ford Rd, Cherry Hill, Canton Center Rd, Michigan Ave\",\n    category: \"Permits & Guidelines\",\n    focus: \"Subdivision HOA dumpster placement rules, driveway protection, and 20-yard container recommendations for home updates.\"\n  },\n  {\n    city: \"Livonia\",\n    county: \"Wayne County\",\n    corridors: \"5 Mile Rd, 6 Mile Rd, 7 Mile Rd, Plymouth Rd, Middlebelt Rd\",\n    category: \"Roofing & Debris\",\n    focus: \"Roof shingle tear-off weight calculations per square, asphalt shingle disposal, and 20 vs 30-yard dumpster selection.\"\n  },\n  {\n    city: \"Northville\",\n    county: \"Wayne / Oakland County\",\n    corridors: \"Historic Downtown Northville, Chubb Rd, 8 Mile Rd, Beck Rd\",\n    category: \"Home Cleanouts\",\n    focus: \"Estate cleanout checklists, garage & attic decluttering, high-end driveway protection skids, and flat-rate pricing.\"\n  },\n  {\n    city: \"Plymouth\",\n    county: \"Wayne County\",\n    corridors: \"Downtown Plymouth, Old Village, Ann Arbor Trail, Sheldon Rd\",\n    category: \"Residential Remodeling\",\n    focus: \"Kitchen & bathroom demolition waste disposal, tight driveway placement in historic neighborhoods, and 15-yard dumpster rentals.\"\n  },\n  {\n    city: \"Novi\",\n    county: \"Oakland County\",\n    corridors: \"Twelve Oaks Mall corridor, Grand River Ave, Beck Rd, 10 Mile Rd\",\n    category: \"Commercial & Renovation\",\n    focus: \"Retail build-out waste disposal, commercial demolition swap-outs, 30 & 40-yard roll-off container capacity.\"\n  },\n  {\n    city: \"Westland\",\n    county: \"Wayne County\",\n    corridors: \"Wayne Rd, Warren Rd, Ford Rd, Joy Rd, Marquette\",\n    category: \"Home Cleanouts\",\n    focus: \"Same-day dumpster dispatch, basement flood cleanup & debris disposal, flat-rate pricing without weight surcharges.\"\n  },\n  {\n    city: \"Detroit\",\n    county: \"Wayne County\",\n    corridors: \"Downtown, Midtown, Corktown, Woodbridge, East English Village\",\n    category: \"Urban Renovations\",\n    focus: \"Urban home renovation dumpsters, street permit guidelines, heavy masonry/concrete disposal, and roll-off delivery.\"\n  }\n];\n\nconst index = Math.floor(Math.random() * topics.length);\nconst selected = topics[index];\nconst today = new Date().toISOString();\n\nreturn [\n  {\n    json: {\n      selectedTopic: selected,\n      today: today\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ],
+      "id": "topic-selector",
+      "name": "Local SEO Topic Selector"
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "messages": {
+          "values": [
+            {
+              "role": "system",
+              "content": "You are Hysam Hammad, Owner & Operations Director of Dumpsters Now (located at 7374 Chubb Rd, Northville, MI 48168; Phone: 888-870-9906). You write highly authoritative, engaging, and localized blog articles designed to rank #1 on Google and be cited by AI Search Engines (Perplexity, ChatGPT Search, Google AI Overviews).\n\nYOUR ESSENTIAL SEO & GEO (GENERATIVE ENGINE OPTIMIZATION) GUIDELINES:\n1. Local Relevance & Entity Dense: Mention specific cities, roads, neighborhoods, and local ordinances (e.g. Canton, Livonia, Northville, Plymouth, Novi, Westland, Detroit; Ford Rd, 5 Mile, 6 Mile, 7 Mile, 8 Mile, Grand River Ave, Chubb Rd depot).\n2. Direct Actionable Data: Include concrete numbers and formulas (e.g., 1 square of 3-tab shingles = 230 lbs; 15-yard = 2 tons / $375; 20-yard = 3 tons / $425; 30-yard = 4 tons / $465; 40-yard = 5 tons / $550).\n3. Structure for AI Answer Engines: Use clear H2/H3 headings, bullet points, comparison tables, and direct Q&A blocks.\n4. Driveway Protection & Trust: Emphasize 100% driveway protection with rubber wheels and heavy-duty wood boards under every dumpster.\n5. Markdown Output Format: You MUST output ONLY valid Markdown text starting with frontmatter:\n---\ntitle: \"[Compelling Local Title with Target City & Keyword]\"\ndescription: \"[Meta description with phone 888-870-9906 and target city]\"\npubDate: {{ $json.today }}\nauthor: \"Hysam Hammad (Owner & Operations Director)\"\nheroImage: \"/assets/images/20230605_104913.webp\"\ncategory: \"{{ $json.selectedTopic.category }}\"\nexcerpt: \"[Engaging 1-2 sentence excerpt]\"\n---\n\n[Body content with H2s, H3s, bullet points, comparison table, local entity details, pricing, and CTA linking to /book-now/ and (888) 870-9906]"
+            },
+            {
+              "role": "user",
+              "content": "Write a comprehensive 1,200+ word blog article focusing on {{ $json.selectedTopic.city }}, MI ({{ $json.selectedTopic.county }}). Category: {{ $json.selectedTopic.category }}. Corridors: {{ $json.selectedTopic.corridors }}. Specific focus: {{ $json.selectedTopic.focus }}."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1,
+      "position": [
+        440,
+        0
+      ],
+      "id": "ai-article-writer",
+      "name": "AI Content & GEO Research Writer"
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "operation": "create",
+        "owner": {
+          "__rl": true,
+          "value": "clovyclov",
+          "mode": "list",
+          "cachedResultName": "clovyclov"
+        },
+        "repository": {
+          "__rl": true,
+          "value": "dumpsters-now",
+          "mode": "list",
+          "cachedResultName": "dumpsters-now"
+        },
+        "filePath": "={{ 'src/content/blog/' + $json.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '.md' }}",
+        "fileContent": "={{ $json.message.content }}",
+        "commitMessage": "={{ 'n8n Auto-Publish: ' + $json.title }}"
+      },
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1,
+      "position": [
+        660,
+        0
+      ],
+      "id": "github-publisher",
+      "name": "Publish to GitHub Repository"
+    }
+  ],
+  "connections": {
+    "Schedule Trigger (Tue & Fri 9am)": {
+      "main": [
+        [
+          {
+            "node": "Local SEO Topic Selector",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Local SEO Topic Selector": {
+      "main": [
+        [
+          {
+            "node": "AI Content & GEO Research Writer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Content & GEO Research Writer": {
+      "main": [
+        [
+          {
+            "node": "Publish to GitHub Repository",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
