@@ -76,9 +76,9 @@
           "mode": "list",
           "cachedResultName": "dumpsters-now"
         },
-        "filePath": "={{ 'src/content/blog/' + $json.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '.md' }}",
+        "filePath": "={{ 'src/content/blog/' + ($json.message.content.match(/title:\\s*\"([^\"]+)\"/)?.[1] || ('dumpster-rental-' + $node['Local SEO Topic Selector'].json.selectedTopic.city.toLowerCase() + '-' + Date.now())).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '.md' }}",
         "fileContent": "={{ $json.message.content }}",
-        "commitMessage": "={{ 'n8n Auto-Publish: ' + $json.title }}"
+        "commitMessage": "={{ 'n8n Auto-Publish: Dumpster Rental ' + $node['Local SEO Topic Selector'].json.selectedTopic.city + ', MI' }}"
       },
       "type": "n8n-nodes-base.github",
       "typeVersion": 1,
