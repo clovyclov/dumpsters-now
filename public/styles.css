@@ -1693,21 +1693,29 @@ section:not(.hero-section) .check-icon svg {
 .booking-trust-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 22px;
   text-align: center;
+}
+
+.booking-trust-grid > div {
+  text-align: center !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 900px) {
   .booking-trust-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 20px;
   }
 }
 
 @media (max-width: 550px) {
   .booking-trust-grid {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 22px;
   }
 }
 
