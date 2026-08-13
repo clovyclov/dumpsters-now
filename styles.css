@@ -77,6 +77,10 @@ ul {
   padding: 0 20px;
 }
 
+.text-center {
+  text-align: center !important;
+}
+
 /* Button Component Styles - Exact Website Neobrutalist Shadow Look */
 .btn {
   display: inline-flex;
