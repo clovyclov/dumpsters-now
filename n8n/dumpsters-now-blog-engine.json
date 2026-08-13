@@ -92,19 +92,21 @@
     },
     {
       "parameters": {
-        "fromEmail": "info@dumpstersnow.com",
-        "toEmail": "shropshireclovis@gmail.com",
+        "resource": "message",
+        "operation": "send",
+        "sendTo": "shropshireclovis@gmail.com",
         "subject": "={{ '\ud83c\udf89 New Blog Published: Dumpster Rental in ' + $node['Local SEO Topic Selector'].json.city + ', MI' }}",
-        "html": "={{ '<h2>\ud83c\udf89 A New Local SEO Blog Post Has Been Automatically Published!</h2><p><strong>Target City:</strong> ' + $node['Local SEO Topic Selector'].json.city + ', MI (' + $node['Local SEO Topic Selector'].json.county + ')</p><p><strong>Category:</strong> ' + $node['Local SEO Topic Selector'].json.category + '</p><p><strong>Focus Area:</strong> ' + $node['Local SEO Topic Selector'].json.focus + '</p><p><strong>Live Article Link:</strong> <a href=\"https://dumpstersnow.com/blog/' + $node['Local SEO Topic Selector'].json.slug + '/\">https://dumpstersnow.com/blog/' + $node['Local SEO Topic Selector'].json.slug + '/</a></p><p><strong>Author:</strong> Hysam Hammad (Owner & Operations Director)</p><hr><p><em>This article was automatically researched, written, and committed to your website via n8n & Astro.</em></p>'"
+        "emailType": "html",
+        "message": "={{ '<h2>\ud83c\udf89 A New Local SEO Blog Post Has Been Automatically Published!</h2><p><strong>Target City:</strong> ' + $node['Local SEO Topic Selector'].json.city + ', MI (' + $node['Local SEO Topic Selector'].json.county + ')</p><p><strong>Category:</strong> ' + $node['Local SEO Topic Selector'].json.category + '</p><p><strong>Focus Area:</strong> ' + $node['Local SEO Topic Selector'].json.focus + '</p><p><strong>Live Article Link:</strong> <a href=\"https://dumpstersnow.com/blog/' + $node['Local SEO Topic Selector'].json.slug + '/\">https://dumpstersnow.com/blog/' + $node['Local SEO Topic Selector'].json.slug + '/</a></p><p><strong>Author:</strong> Hysam Hammad (Owner & Operations Director)</p><hr><p><em>This article was automatically researched, written, and committed to your website via n8n & Astro.</em></p>'"
       },
-      "type": "n8n-nodes-base.emailSend",
+      "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
       "position": [
         880,
         0
       ],
       "id": "email-notification",
-      "name": "Send Email Notification"
+      "name": "Send Gmail Notification"
     }
   ],
   "connections": {
@@ -145,7 +147,7 @@
       "main": [
         [
           {
-            "node": "Send Email Notification",
+            "node": "Send Gmail Notification",
             "type": "main",
             "index": 0
           }
