@@ -16,6 +16,8 @@ export default defineConfig({
     '/ann-arbor/dumpster-rental/': '/service-areas/',
     '/services/commercial-dumpster-rentals': '/commercial-dumpster-rentals/',
     '/services/commercial-dumpster-rentals/': '/commercial-dumpster-rentals/',
+    '/blog/dumpster-rental-plymouth-1786660942155': '/blog/dumpster-rental-plymouth-mi/',
+    '/blog/dumpster-rental-plymouth-1786660942155/': '/blog/dumpster-rental-plymouth-mi/',
   },
   integrations: [
     sitemap({
