@@ -3,7 +3,7 @@ title: "Plymouth, MI Kitchen & Bathroom Remodel Debris Disposal: Dumpster Size &
 description: "A complete guide to managing remodeling waste in Plymouth, MI. Learn about dumpster sizes, weight allowances, driveway protection, historic neighborhood placement, and flat-rate pricing. Call Dumpsters Now at (888) 870-9906."
 pubDate: 2026-08-13T00:00:00.000Z
 author: "Hysam Hammad (Owner & Operations Director)"
-heroImage: "/assets/images/20230605_104913.webp"
+heroImage: "/assets/images/dumpstersnow-real-7.webp"
 category: "Residential Remodeling"
 excerpt: "Planning a kitchen remodel, bathroom tear-out, or historic home renovation in Plymouth, Michigan? Compare dumpster sizes, heavy drywall/tile weight allowances, driveway placement, and local delivery details."
 ---

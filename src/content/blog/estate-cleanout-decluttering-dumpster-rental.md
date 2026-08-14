@@ -3,7 +3,7 @@ title: "The Ultimate Estate Cleanout & Decluttering Guide for Michigan Homeowner
 description: "Managing a whole-home estate cleanout, foreclosure purge, or downsizing project in Southeast Michigan. Practical steps, dumpster sizing, and eco-friendly sorting tips."
 pubDate: 2026-08-05T14:00:00.000Z
 author: "Dumpsters Now Team"
-heroImage: "/assets/images/WhatsApp Image 2023-05-06 at 12.53.15 PM.jpeg"
+heroImage: "/assets/images/dumpstersnow-real-1.webp"
 category: "Home Cleanouts"
 excerpt: "Overwhelmed by years of accumulated household items? Follow our step-by-step estate cleanout guide for families across Wayne and Oakland County."
 ---

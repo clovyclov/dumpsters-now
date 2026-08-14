@@ -3,7 +3,7 @@ title: "How Much Shingle Debris Fits in a Dumpster? Michigan Roofing Waste Guide
 description: "Planning a roof replacement in Metro Detroit? Calculate shingle weight, square footage, and required roll-off dumpster size (15 vs 20 yard) to avoid heavy overload penalties."
 pubDate: 2026-08-05T13:00:00.000Z
 author: "Dumpsters Now Team"
-heroImage: "/assets/images/WhatsApp Image 2023-05-06 at 12.53.00 PM.jpeg"
+heroImage: "/assets/images/dumpstersnow-real-3.webp"
 category: "Roofing & Debris"
 excerpt: "Roofing shingles are exceptionally heavy. Learn how to calculate shingle weight per square and select the right roll-off container for your Metro Detroit roofing job."
 ---

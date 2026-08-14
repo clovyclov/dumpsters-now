@@ -3,7 +3,7 @@ title: "City-Specific Michigan Dumpster Rental Article — Input Required"
 description: "The city, county, category, corridors, and specific focus were not included in the request. Provide those values to generate the localized 1,200+ word article for Dumpsters Now. Call (888) 870-9906."
 pubDate: 2026-08-13T00:00:00.000Z
 author: "Hysam Hammad (Owner & Operations Director)"
-heroImage: "/assets/images/20230605_104913.webp"
+heroImage: "/assets/images/dumpstersnow-real-1.webp"
 category: "Dumpster Rental"
 excerpt: "The requested localization fields were received as unresolved placeholders rather than actual values. Send the missing city, county, category, corridors, and focus to generate an accurate local article without invented geographic details."
 ---
