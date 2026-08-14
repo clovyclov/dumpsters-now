@@ -76,10 +76,12 @@
           "mode": "list",
           "cachedResultName": "dumpsters-now"
         },
-        "branch": "main",
         "filePath": "={{ 'src/content/blog/' + $node['Local SEO Topic Selector'].json.slug + '.md' }}",
         "fileContent": "={{ $json.message.content }}",
-        "commitMessage": "={{ 'n8n Auto-Publish: Dumpster Rental ' + $node['Local SEO Topic Selector'].json.city + ', MI' }}"
+        "commitMessage": "={{ 'n8n Auto-Publish: Dumpster Rental ' + $node['Local SEO Topic Selector'].json.city + ', MI' }}",
+        "options": {
+          "branch": "main"
+        }
       },
       "type": "n8n-nodes-base.github",
       "typeVersion": 1,
