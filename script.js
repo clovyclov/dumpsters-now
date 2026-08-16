@@ -197,6 +197,8 @@ function initTestimonialsSlider() {
 /* ----------------------------------------------------
    4. Quote & Contact Form Submission Handler
    ---------------------------------------------------- */
+const pageLoadTimestamp = Date.now();
+
 function initQuoteForm() {
   const forms = document.querySelectorAll('form');
   const webhookUrl = 'https://services.leadconnectorhq.com/hooks/yJD5SvyhI1ZTkVBBzPNg/webhook-trigger/WtUDW0Uz8SD0jxSebCZo';
@@ -227,6 +229,37 @@ function initQuoteForm() {
       const sizeVal = sizeInput?.value || '';
       const soonVal = soonInput?.value || '';
 
+      // ANTI-SPAM GUARD 1: Invisible Honeypot Trap
+      const hpInput = form.querySelector('input[name="website_hp_check"]');
+      if (hpInput && hpInput.value.trim() !== '') {
+        console.warn('Spambot detected via Honeypot trap. Form submission aborted.');
+        safeRedirect();
+        return;
+      }
+
+      // ANTI-SPAM GUARD 2: Sub-Second Bot Speed Guard (< 1.8 seconds)
+      if (Date.now() - pageLoadTimestamp < 1800) {
+        console.warn('Automated bot submission speed detected (< 1.8s). Form submission aborted.');
+        safeRedirect();
+        return;
+      }
+
+      // ANTI-SPAM GUARD 3: Google reCAPTCHA v3 Execution
+      let recaptchaToken = '';
+      if (typeof window.grecaptcha !== 'undefined') {
+        try {
+          recaptchaToken = await new Promise((resolve) => {
+            window.grecaptcha.ready(() => {
+              window.grecaptcha.execute('6LcqLIgtAAAAADpjyIMXtHcnZdmPJUxUiAcgA-fk', { action: 'quote_submit' })
+                .then(resolve)
+                .catch(() => resolve(''));
+            });
+          });
+        } catch (err) {
+          console.warn('reCAPTCHA execution fallback:', err);
+        }
+      }
+
       const nameParts = nameVal.split(/\s+/).filter(Boolean);
       const firstName = nameParts[0] || nameVal;
       const lastName = nameParts.slice(1).join(' ') || '';
@@ -240,6 +273,8 @@ function initQuoteForm() {
         city: cityVal,
         dumpster_size: sizeVal,
         delivery_timeline: soonVal,
+        recaptcha_token: recaptchaToken,
+        recaptcha_action: 'quote_submit',
         source_url: window.location.href,
         submitted_at: new Date().toISOString()
       };
