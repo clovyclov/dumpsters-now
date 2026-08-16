@@ -43,6 +43,10 @@ const {
       <p>Lock in your flat-rate delivery date. Same-day & next-day dispatch available across Wayne, Oakland, and Macomb counties.</p>
 
       <form id="quoteForm">
+        <!-- Invisible Honeypot Anti-Spam Field -->
+        <div style="display:none !important; visibility:hidden !important; position:absolute; left:-9999px;" aria-hidden="true">
+          <input type="text" name="website_hp_check" tabindex="-1" autocomplete="off">
+        </div>
         <div class="form-group">
           <label class="form-label" for="name">Your Name <span>*</span></label>
           <input type="text" id="name" name="name" class="form-input" required placeholder="John Doe">
