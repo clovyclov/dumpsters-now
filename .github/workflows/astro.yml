@@ -1,3 +1,4 @@
+# Sample workflow for building and deploying an Astro site to GitHub Pages
 name: Deploy Astro site to Pages
 
 on:
@@ -14,6 +15,9 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  BUILD_PATH: "."
+
 jobs:
   build:
     name: Build
@@ -21,26 +25,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-
+          node-version: "22"
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-
       - name: Install dependencies
-        run: npm install --force
-
+        run: npm install --legacy-peer-deps
+        working-directory: ${{ env.BUILD_PATH }}
       - name: Build with Astro
-        run: npx astro build
-
+        run: |
+          npx astro build \
+            --site "${{ steps.pages.outputs.origin }}" \
+            --base "${{ steps.pages.outputs.base_path }}"
+          cp dist/sitemap-0.xml dist/sitemap.xml || true
+        working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ${{ env.BUILD_PATH }}/dist
 
   deploy:
     environment:
