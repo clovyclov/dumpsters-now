@@ -1,0 +1,3 @@
+name = "dumpsters-now-lead-guard"
+main = "src/index.js"
+compatibility_date = "2026-08-16"
