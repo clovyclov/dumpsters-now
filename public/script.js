@@ -244,7 +244,21 @@ function initQuoteForm() {
         return;
       }
 
-      // ANTI-SPAM GUARD 3: Google reCAPTCHA v3 Execution
+      // ANTI-SPAM GUARD 3: Cloudflare Turnstile Token Validation
+      const turnstileInput = form.querySelector('input[name="cf-turnstile-response"]');
+      const turnstileToken = turnstileInput?.value || '';
+
+      // If Turnstile widget is rendered on form but token is missing/empty, block submission
+      if (form.querySelector('.cf-turnstile') && !turnstileToken) {
+        alert('Please complete the security verification challenge before submitting.');
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Get Your Dumpster Rental Quote';
+        }
+        return;
+      }
+
+      // ANTI-SPAM GUARD 4: Google reCAPTCHA v3 Execution
       let recaptchaToken = '';
       if (typeof window.grecaptcha !== 'undefined') {
         try {
@@ -273,6 +287,7 @@ function initQuoteForm() {
         city: cityVal,
         dumpster_size: sizeVal,
         delivery_timeline: soonVal,
+        turnstile_token: turnstileToken,
         recaptcha_token: recaptchaToken,
         recaptcha_action: 'quote_submit',
         source_url: window.location.href,
