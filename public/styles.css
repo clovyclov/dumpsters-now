@@ -1241,7 +1241,8 @@ section:not(.hero-section) .check-icon svg {
   }
 
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 1.85rem;
+    line-height: 1.2;
   }
 
   .pricing-grid {
@@ -1267,6 +1268,13 @@ section:not(.hero-section) .check-icon svg {
 
   .allowed-prohibited-grid {
     grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.55rem;
+    line-height: 1.2;
   }
 }
 
