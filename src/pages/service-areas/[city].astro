@@ -118,7 +118,7 @@ const { city } = Astro.props;
                   <li>{feature}</li>
                 ))}
               </ul>
-              <a href="/book-now/" class="btn btn-green btn-block">Reserve {item.name.replace(' Dumpster', '')} →</a>
+              <a href="/book-now/" class="btn btn-green btn-block">Rent {item.name.replace(' Dumpster', '')} →</a>
             </div>
           </div>
         ))}
@@ -134,35 +134,38 @@ const { city } = Astro.props;
           <img src={city.feature1Img} alt={`Dumpsters Now roll-off dumpster delivered in ${city.cityName} MI`} style="width: 100%; height: auto; display: block; object-fit: cover;" loading="lazy" decoding="async">
         </div>
         <div>
-          <div class="section-subtitle">{city.feature1Sub}</div>
-          <h2 class="section-title" style="font-size: 2rem; margin-bottom: 15px;">{city.feature1Title}</h2>
-          <p style="color: var(--text-dark); line-height: 1.7; font-size: 1.05rem; margin-bottom: 20px;">
+          <span class="badge badge-outline" style="margin-bottom: 12px;">Local {city.cityName} Service</span>
+          <h2 style="font-size: 2rem; font-weight: 800; color: #0f172a; margin-bottom: 15px; line-height: 1.2;">
+            {city.feature1Title}
+          </h2>
+          <p style="font-size: 1.05rem; color: #475569; line-height: 1.6; margin-bottom: 20px;">
             {city.feature1Desc}
           </p>
-          <ul style="list-style: none; padding: 0; margin: 0 0 25px 0;">
-            {city.feature1Bullets.map(bullet => (
-              <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-weight: 600; color: var(--navy-dark);">
-                <span style="color: var(--primary-green); font-weight: 800; font-size: 1.2rem;">✓</span> {bullet}
-              </li>
-            ))}
-          </ul>
-          <a href="tel:888-870-9906" class="btn btn-red">Call {city.cityName} Dispatch: (888) 870-9906</a>
+          <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+            <a href="/book-now/" class="btn btn-red">Book Online Now</a>
+            <a href="tel:888-870-9906" class="btn btn-outline">Call (888) 870-9906</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==================== ALTERNATING FEATURE SPLIT SECTION 2 ==================== -->
-  <section style="padding: 60px 0; background: var(--bg-light);">
+  <section style="padding: 60px 0; background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
     <div class="container">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: center;">
-        <div>
-          <div class="section-subtitle">{city.feature2Sub}</div>
-          <h2 class="section-title" style="font-size: 2rem; margin-bottom: 15px;">{city.feature2Title}</h2>
-          <p style="color: var(--text-dark); line-height: 1.7; font-size: 1.05rem; margin-bottom: 20px;">
+        <div style="order: 2;">
+          <span class="badge badge-outline" style="margin-bottom: 12px;">Fast Delivery</span>
+          <h2 style="font-size: 2rem; font-weight: 800; color: #0f172a; margin-bottom: 15px; line-height: 1.2;">
+            {city.feature2Title}
+          </h2>
+          <p style="font-size: 1.05rem; color: #475569; line-height: 1.6; margin-bottom: 20px;">
             {city.feature2Desc}
           </p>
-          <ul style="list-style: none; padding: 0; margin: 0 0 25px 0;">
+          <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+            <a href="/book-now/" class="btn btn-green">Rent {city.cityName} Dumpster →</a>
+          </div>
+          <ul style="list-style: none; padding: 0; margin: 25px 0 0 0;">
             {city.feature2Bullets.map(bullet => (
               <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-weight: 600; color: var(--navy-dark);">
                 <span style="color: var(--primary-green); font-weight: 800; font-size: 1.2rem;">✓</span> {bullet}
