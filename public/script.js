@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTestimonialsSlider();
   initQuoteForm();
   initQuoteModal();
+  initStickyCallBar();
 });
 
 /* ----------------------------------------------------
@@ -413,4 +414,42 @@ function initQuoteModal() {
       closeModal();
     }
   });
+}
+
+/* ----------------------------------------------------
+   6. Sticky Mobile Call Bar (Scroll past Hero)
+   ---------------------------------------------------- */
+function initStickyCallBar() {
+  const stickyBar = document.querySelector('.sticky-call-bar');
+  if (!stickyBar) return;
+
+  const hero = document.querySelector('.hero-section') || document.querySelector('.hero') || document.querySelector('header');
+  if (!hero) {
+    stickyBar.classList.add('visible');
+    return;
+  }
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          stickyBar.classList.add('visible');
+        } else {
+          stickyBar.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    observer.observe(hero);
+  } else {
+    const checkScroll = () => {
+      const heroRect = hero.getBoundingClientRect();
+      if (heroRect.bottom <= 50) {
+        stickyBar.classList.add('visible');
+      } else {
+        stickyBar.classList.remove('visible');
+      }
+    };
+    window.addEventListener('scroll', checkScroll, { passive: true });
+    checkScroll();
+  }
 }
