@@ -194,6 +194,19 @@ ul {
   gap: 15px;
 }
 
+@media (max-width: 768px) {
+  .ppc-header-container {
+    flex-wrap: wrap;
+  }
+  .ppc-phone-badge {
+    flex-basis: 100%;
+    margin-top: 12px;
+  }
+  .ppc-phone-badge .btn {
+    width: 100%;
+  }
+}
+
 @media (max-width: 600px) {
   .ppc-header-container {
     gap: 10px;
@@ -204,10 +217,12 @@ ul {
     max-width: 135px !important;
     object-fit: contain;
   }
-  .ppc-header-container .btn {
-    font-size: 0.8rem !important;
-    padding: 8px 12px !important;
-    white-space: nowrap !important;
+  .header-review-badge {
+    padding: 4px 10px;
+  }
+  .ppc-phone-badge .btn {
+    font-size: 1rem !important;
+    padding: 14px !important;
   }
 }
 
