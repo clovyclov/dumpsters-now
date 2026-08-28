@@ -251,6 +251,10 @@ ul {
   color: var(--primary-red);
 }
 
+.mobile-nav-cta {
+  display: none;
+}
+
 /* Dropdown Menu */
 .dropdown-menu {
   position: absolute;
@@ -1211,10 +1215,31 @@ section:not(.hero-section) .check-icon svg {
     padding: 30px;
     border-right: 3px solid #000000;
     transition: left 0.3s ease;
+    overflow-y: auto;
+    box-shadow: 10px 0 30px rgba(0,0,0,0.15);
   }
 
   .nav-menu.active {
     left: 0;
+  }
+
+  .mobile-nav-cta {
+    display: block;
+    width: 100%;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 2px solid #e2e8f0;
+  }
+
+  .mobile-nav-cta .btn {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 1.05rem;
+    font-weight: 800;
   }
 
   .dropdown-menu {
