@@ -42,7 +42,7 @@ function initMobileMenu() {
     });
 
     // Close menu on link click
-    document.querySelectorAll('.dropdown-item').forEach(link => {
+    document.querySelectorAll('.dropdown-item, .mobile-nav-cta .btn, .nav-link:not(.nav-item > .nav-link)').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         hamburgerBtn.classList.remove('active');
