@@ -172,6 +172,20 @@ const faqJsonLd = faqSchema.length > 0 ? {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Pre-GTM Enhanced Conversions DataLayer Initialization -->
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    try {
+      var _stored = sessionStorage.getItem('dn_user_data');
+      if (_stored) {
+        var _ud = JSON.parse(_stored);
+        window.dataLayer.push({
+          'user_data': _ud
+        });
+      }
+    } catch (e) {}
+  </script>
+
   <!-- Google Tag Manager -->
   <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

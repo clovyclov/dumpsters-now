@@ -279,18 +279,25 @@ function initQuoteForm() {
 
       // Enhanced Conversions: Push customer data to GTM dataLayer safely
       window.dataLayer = window.dataLayer || [];
+      const ecUserData = {
+        'email': emailVal,
+        'phone_number': phoneVal,
+        'address': {
+          'first_name': firstName,
+          'last_name': lastName,
+          'city': cityVal
+        }
+      };
       window.dataLayer.push({
         'event': 'lead_form_submitted',
-        'user_data': {
-          'email': emailVal,
-          'phone_number': phoneVal,
-          'address': {
-            'first_name': firstName,
-            'last_name': lastName,
-            'city': cityVal
-          }
-        }
+        'user_data': ecUserData
       });
+
+      try {
+        sessionStorage.setItem('dn_user_data', JSON.stringify(ecUserData));
+      } catch (e) {
+        console.warn('Could not save user_data to sessionStorage', e);
+      }
 
       const doRedirect = () => {
         const currentUrl = window.location.href.toLowerCase();
