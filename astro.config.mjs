@@ -18,6 +18,8 @@ export default defineConfig({
     '/services/commercial-dumpster-rentals/': '/commercial-dumpster-rentals/',
     '/blog/dumpster-rental-plymouth-1786660942155': '/blog/dumpster-rental-plymouth-mi/',
     '/blog/dumpster-rental-plymouth-1786660942155/': '/blog/dumpster-rental-plymouth-mi/',
+    '/book-now-mi': '/book-online-mi/',
+    '/book-now-mi/': '/book-online-mi/',
   },
   integrations: [
     sitemap({
