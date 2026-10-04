@@ -252,11 +252,8 @@ const faqJsonLd = faqSchema.length > 0 ? {
   <!-- Main Client-Side JavaScript -->
   <script is:inline src="/script.js"></script>
 
-  {(isPPC || activePage === 'landing') && (
-    <>
-      <script is:inline src="https://backend.leadconnectorhq.com/appengine/loc/yJD5SvyhI1ZTkVBBzPNg/pool/cEnU1EEDr91pnqn52p6Z/number_pool.js"></script>
-      <script is:inline src="https://backend.leadconnectorhq.com/appengine/js/user_session.js"></script>
-    </>
-  )}
+  <!-- LeadConnector Number Pool Scripts -->
+  <script is:inline src="https://backend.leadconnectorhq.com/appengine/loc/yJD5SvyhI1ZTkVBBzPNg/pool/cEnU1EEDr91pnqn52p6Z/number_pool.js"></script>
+  <script is:inline src="https://backend.leadconnectorhq.com/appengine/js/user_session.js"></script>
 </body>
 </html>
