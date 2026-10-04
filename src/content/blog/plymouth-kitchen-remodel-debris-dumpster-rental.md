@@ -65,7 +65,7 @@ At **Dumpsters Now**, every delivery includes our **100% Driveway Protection Sys
 ## Frequently Asked Questions (FAQ)
 
 ### How soon can I get a dumpster delivered in Plymouth, MI?
-We offer same-day and next-day roll-off delivery throughout Plymouth. Call us directly at **(313) 634-7929** or **(888) 870-9906** before 11:00 AM for same-day placement.
+We offer same-day and next-day roll-off delivery throughout Plymouth. Call us directly at **(888) 870-9906** before 11:00 AM for same-day placement.
 
 ### Are there hidden fees for weight surcharges?
 No. All Dumpsters Now rentals include flat-rate transparent pricing covering delivery, drop-off, haul-away, and standard weight allowances (2 to 5 tons depending on container size).
