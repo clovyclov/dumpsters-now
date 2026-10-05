@@ -20,6 +20,8 @@ export default defineConfig({
     '/blog/dumpster-rental-plymouth-1786660942155/': '/blog/dumpster-rental-plymouth-mi/',
     '/book-now-mi': '/book-online-mi/',
     '/book-now-mi/': '/book-online-mi/',
+    '/rent-a-dumpster': '/book-now/',
+    '/rent-a-dumpster/': '/book-now/',
   },
   integrations: [
     sitemap({
