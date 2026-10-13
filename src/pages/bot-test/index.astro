@@ -4,36 +4,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Bot Test | Dumpsters Now"
-  description="Internal test environment for Dumpsters Now GoHighLevel conversation bot widget."
+  description="Bot test page"
   canonical="https://dumpstersnow.com/bot-test/"
   noindex={true}
   activePage="home"
 >
-  <section style="padding: 90px 0 120px; background-color: var(--bg-cream); min-height: 70vh;">
-    <div class="container" style="max-width: 800px; text-align: center;">
-      <span class="banner-pill" style="margin-bottom: 16px;">Internal Testing</span>
-
-      <h1 style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 900; color: var(--text-dark); text-transform: uppercase; margin-bottom: 20px;">
-        Bot Test Environment
-      </h1>
-
-      <p style="font-size: 1.15rem; color: #475569; line-height: 1.6; margin-bottom: 30px;">
-        The LeadConnector chat widget is active on this page. Look for the chat icon in the bottom right corner to test the conversation AI bot and message workflows.
-      </p>
-
-      <div style="background: #ffffff; border: 3.5px solid #000000; box-shadow: 8px 8px 0px #000000; border-radius: var(--radius-lg); padding: 30px; text-align: left;">
-        <h3 style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 800; color: var(--text-dark); margin-bottom: 12px; text-transform: uppercase;">
-          Widget Configuration
-        </h3>
-        <p style="font-size: 0.95rem; color: #475569; margin-bottom: 8px;">
-          <strong>Widget ID:</strong> <code>679ab75fa77c7f011058381a</code>
-        </p>
-        <p style="font-size: 0.95rem; color: #475569; margin: 0;">
-          <strong>Status:</strong> Active on <code>/bot-test/</code> (set to <code>noindex</code> to prevent search engine indexing).
-        </p>
-      </div>
-    </div>
-  </section>
+  <div style="min-height: 80vh; background-color: var(--bg-cream);"></div>
 
   <!-- LeadConnector Chat Widget -->
   <script is:inline src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="679ab75fa77c7f011058381a"></script>
