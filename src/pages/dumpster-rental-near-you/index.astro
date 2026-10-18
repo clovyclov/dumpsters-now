@@ -1,0 +1,706 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import TestimonialSlider from '../../components/TestimonialSlider.astro';
+---
+
+<BaseLayout
+  title="Same-Day Dumpster Rental Metro Detroit | Flat-Rate Pricing | Dumpsters Now"
+  description="Rent a roll-off dumpster in Metro Detroit fast! 15, 20, 30 & 40 yard dumpsters with flat-rate transparent pricing, driveway protection & same-day delivery. Call 888-870-9906."
+  canonical="https://dumpstersnow.com/dumpster-rental-near-you/"
+  noindex={true}
+  hideHeader={true}
+  activePage="landing"
+  isPPC={true}
+>
+  <!-- ==================== PPC HIGH-CONVERSION HEADER ==================== -->
+  <header class="ppc-header">
+    <div class="container ppc-header-container">
+      <a href="/" class="logo-link">
+        <img src="/assets/images/dumpster-now-logo.png" alt="Dumpsters Now Logo" style="max-height: 50px;">
+      </a>
+
+      <div class="header-review-badge" style="display: flex; flex-direction: column; align-items: center; gap: 2px; border: 1px solid #e2e8f0; border-radius: 10px; padding: 6px 16px;">
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <img src="/assets/images/icons8-google-48.png" alt="Google" style="width: 16px; height: 16px;">
+          <span style="color: #f59e0b; font-size: 0.85rem; letter-spacing: 1px;">★★★★★</span>
+        </div>
+        <div style="font-weight: 800; font-size: 0.85rem; color: #1a73e8;">5.0 from 120+ Reviews</div>
+        <div style="font-style: italic; font-size: 0.75rem; color: #64748b;">800+ Happy Customers!</div>
+      </div>
+
+      <div class="ppc-phone-badge">
+        <div style="text-align: right; display: none; @media(min-width: 600px){display:block;}">
+          <div style="font-size: 0.78rem; font-weight: 800; text-transform: uppercase; color: #64748b;">Need A Dumpster Today?</div>
+          <a href="tel:888-870-9906" class="ppc-phone-number">(888) 870-9906</a>
+        </div>
+        <a href="tel:888-870-9906" class="btn btn-red" style="font-size: 1rem; padding: 12px 22px;">CALL US (888) 870-9906</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION WITH CONVERSION FORM ==================== -->
+  <section class="hero-section" style="background: #0f172a; padding: 50px 0 70px; border-bottom: 3px solid #1e293b;">
+    <div class="container">
+      <div class="hero-grid" style="align-items: center;">
+        
+        <!-- Left Hero Offer Copy -->
+        <div class="hero-offer-content">
+          <div class="rating-badge" style="margin-bottom: 18px;">
+            <span class="stars" style="color: var(--star-gold);">★★★★★</span>
+            <span style="font-weight: 800; font-size: 0.9rem;">5.0 Rating (120+ Google Reviews)</span>
+          </div>
+
+          <h1 id="hero-headline" class="hero-title" style="line-height: 1.15; margin-bottom: 20px;">
+            Rent A Dumpster Without Hidden Fees, Surprises, Or Late Delivery
+          </h1>
+
+          <!-- Infinite 7-Image Dumpster Slider Under Headline, paired with customer reviews -->
+          <div class="hero-slider-wrapper" style="margin-bottom: 22px; overflow: hidden; position: relative; width: 100%;">
+            <div class="hero-slider-track" id="heroSliderTrack" style="display: flex; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); width: 100%;">
+              
+              <!-- Slide 1 -->
+              <div class="hero-slide" style="min-width: 100%; flex: 0 0 100%; display: flex; flex-direction: column; background: #0f172a;">
+                <img
+                  src="/assets/images/dumpstersnow-real-1.webp"
+                  alt="Dumpsters Now Driveway Delivery 1"
+                  class="hero-slide-img"
+                  style="border-radius: 14px; border: 3.5px solid #000000; box-shadow: 6px 6px 0px #000000; width: 100%; height: auto; max-height: 270px; object-fit: cover;"
+                />
+                <div class="hero-slide-review" style="background: #0f172a; padding: 16px 20px 20px; text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                  <div style="color: #f59e0b; font-size: 1rem; letter-spacing: 2px; margin-bottom: 8px;">★★★★★</div>
+                  <p style="color: #e2e8f0; font-style: italic; font-size: 0.95rem; line-height: 1.5; margin: 0 0 8px;">"I appreciated the speed above everything: requested the dumpster Friday evening and it was dropped off Saturday afternoon. Smooth and efficient process."</p>
+                  <div style="color: #94a3b8; font-weight: 700; font-size: 0.85rem;">Kocher Pharmacy</div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="hero-slide" style="min-width: 100%; flex: 0 0 100%; display: flex; flex-direction: column; background: #0f172a;">
+                <img
+                  src="/assets/images/dumpstersnow-real-2.webp"
+                  alt="Dumpsters Now Roll-Off Dumpster Delivery 2"
+                  class="hero-slide-img"
+                  style="border-radius: 14px; border: 3.5px solid #000000; box-shadow: 6px 6px 0px #000000; width: 100%; height: auto; max-height: 270px; object-fit: cover;"
+                />
+                <div class="hero-slide-review" style="background: #0f172a; padding: 16px 20px 20px; text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                  <div style="color: #f59e0b; font-size: 1rem; letter-spacing: 2px; margin-bottom: 8px;">★★★★★</div>
+                  <p style="color: #e2e8f0; font-style: italic; font-size: 0.95rem; line-height: 1.5; margin: 0 0 8px;">"Dumpster was delivered on time and removed when project was finished. Very flexible and great customer service. Driver was extremely polite."</p>
+                  <div style="color: #94a3b8; font-weight: 700; font-size: 0.85rem;">Maymon Mustafa</div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="hero-slide" style="min-width: 100%; flex: 0 0 100%; display: flex; flex-direction: column; background: #0f172a;">
+                <img
+                  src="/assets/images/dumpstersnow-real-3.webp"
+                  alt="Dumpsters Now Jobsite Roll-Off 3"
+                  class="hero-slide-img"
+                  style="border-radius: 14px; border: 3.5px solid #000000; box-shadow: 6px 6px 0px #000000; width: 100%; height: auto; max-height: 270px; object-fit: cover;"
+                />
+                <div class="hero-slide-review" style="background: #0f172a; padding: 16px 20px 20px; text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                  <div style="color: #f59e0b; font-size: 1rem; letter-spacing: 2px; margin-bottom: 8px;">★★★★★</div>
+                  <p style="color: #e2e8f0; font-style: italic; font-size: 0.95rem; line-height: 1.5; margin: 0 0 8px;">"They were able to get a dumpster out when no one else was available. And left it for a few extra days no charge. Highly recommended!"</p>
+                  <div style="color: #94a3b8; font-weight: 700; font-size: 0.85rem;">Nathan Hill</div>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="hero-slide" style="min-width: 100%; flex: 0 0 100%; display: flex; flex-direction: column; background: #0f172a;">
+                <img
+                  src="/assets/images/dumpstersnow-real-4.webp"
+                  alt="Dumpsters Now Clean Dumpster Rental 4"
+                  class="hero-slide-img"
+                  style="border-radius: 14px; border: 3.5px solid #000000; box-shadow: 6px 6px 0px #000000; width: 100%; height: auto; max-height: 270px; object-fit: cover;"
+                />
+                <div class="hero-slide-review" style="background: #0f172a; padding: 16px 20px 20px; text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                  <div style="color: #f59e0b; font-size: 1rem; letter-spacing: 2px; margin-bottom: 8px;">★★★★★</div>
+                  <p style="color: #e2e8f0; font-style: italic; font-size: 0.95rem; line-height: 1.5; margin: 0 0 8px;">"Fantastic customer service. Rented two dumpsters over the past two years and both times have been great! Thank you Dumpsters Now!"</p>
+                  <div style="color: #94a3b8; font-weight: 700; font-size: 0.85rem;">Brian Markovich</div>
+                </div>
+              </div>
+
+              <!-- Slide 5 -->
+              <div class="hero-slide" style="min-width: 100%; flex: 0 0 100%; display: flex; flex-direction: column; background: #0f172a;">
+                <img
+                  src="/assets/images/dumpstersnow-real-5.webp"
+                  alt="Dumpsters Now Driveway Safe Dumpster 5"
+                  class="hero-slide-img"
+                  style="border-radius: 14px; border: 3.5px solid #000000; box-shadow: 6px 6px 0px #000000; width: 100%; height: auto; max-height: 270px; object-fit: cover;"
+                />
+                <div class="hero-slide-review" style="background: #0f172a; padding: 16px 20px 20px; text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                  <div style="color: #f59e0b; font-size: 1rem; letter-spacing: 2px; margin-bottom: 8px;">★★★★★</div>
+                  <p style="color: #e2e8f0; font-style: italic; font-size: 0.95rem; line-height: 1.5; margin: 0 0 8px;">"Super easy to book online and showed up right on time. Good communication on delivery and pick ups. Five stars!"</p>
+                  <div style="color: #94a3b8; font-weight: 700; font-size: 0.85rem;">Rachel Steudle</div>
+                </div>
+              </div>
+
+              <!-- Slide 6 -->
+              <div class="hero-slide" style="min-width: 100%; flex: 0 0 100%; display: flex; flex-direction: column; background: #0f172a;">
+                <img
+                  src="/assets/images/dumpstersnow-real-6.webp"
+                  alt="Dumpsters Now Residential Dumpster 6"
+                  class="hero-slide-img"
+                  style="border-radius: 14px; border: 3.5px solid #000000; box-shadow: 6px 6px 0px #000000; width: 100%; height: auto; max-height: 270px; object-fit: cover;"
+                />
+                <div class="hero-slide-review" style="background: #0f172a; padding: 16px 20px 20px; text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                  <div style="color: #f59e0b; font-size: 1rem; letter-spacing: 2px; margin-bottom: 8px;">★★★★★</div>
+                  <p style="color: #e2e8f0; font-style: italic; font-size: 0.95rem; line-height: 1.5; margin: 0 0 8px;">"Short notice delivery and short notice pickup was not a problem at all. Always reliable, prompt, and great service."</p>
+                  <div style="color: #94a3b8; font-weight: 700; font-size: 0.85rem;">Dan Ribar</div>
+                </div>
+              </div>
+
+              <!-- Slide 7 -->
+              <div class="hero-slide" style="min-width: 100%; flex: 0 0 100%; display: flex; flex-direction: column; background: #0f172a;">
+                <img
+                  src="/assets/images/dumpstersnow-real-7.webp"
+                  alt="Dumpsters Now Cleanout Dumpster 7"
+                  class="hero-slide-img"
+                  style="border-radius: 14px; border: 3.5px solid #000000; box-shadow: 6px 6px 0px #000000; width: 100%; height: auto; max-height: 270px; object-fit: cover;"
+                />
+                <div class="hero-slide-review" style="background: #0f172a; padding: 16px 20px 20px; text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                  <div style="color: #f59e0b; font-size: 1rem; letter-spacing: 2px; margin-bottom: 8px;">★★★★★</div>
+                  <p style="color: #e2e8f0; font-style: italic; font-size: 0.95rem; line-height: 1.5; margin: 0 0 8px;">"I had a great experience with Dumpsters Now. They communicated well, booking was easy on the website, and prices were reasonable."</p>
+                  <div style="color: #94a3b8; font-weight: 700; font-size: 0.85rem;">Chris Ollerich</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <ul class="hero-features" style="margin-bottom: 30px; list-style: none; padding: 0;">
+            <li>
+              <div class="check-icon"><svg viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg></div>
+              <div id="hero-delivery-bullet"><strong>Same-Day &amp; Next-Day Delivery</strong> Available across Metro Detroit</div>
+            </li>
+            <li>
+              <div class="check-icon"><svg viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg></div>
+              <div><strong>Flat-Rate Pricing</strong> — Drop-off, haul-away &amp; weight included</div>
+            </li>
+            <li>
+              <div class="check-icon"><svg viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg></div>
+              <div><strong>100% Driveway Protection Guarantee</strong> with rubber wheels</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Hero Above-The-Fold Form -->
+        <div class="quote-form-card" id="ppc-form">
+          <h3>One Flat Price. No Hidden Fees. No Weight Surprises.</h3>
+          <p id="hero-form-subtext">Lock in your flat-rate delivery date. Same-day &amp; next-day dispatch available across Wayne, Oakland, and Macomb counties.</p>
+
+          <form id="ppcQuoteForm">
+            <!-- Invisible Honeypot Anti-Spam Field -->
+            <div style="display:none !important; visibility:hidden !important; position:absolute; left:-9999px;" aria-hidden="true">
+              <input type="text" name="website_hp_check" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="nameHero">Your Name <span>*</span></label>
+              <input type="text" id="nameHero" class="form-input" required placeholder="John Doe">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="phoneHero">Phone Number <span>*</span></label>
+              <input type="tel" id="phoneHero" class="form-input" required placeholder="(888) 870-9906">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="cityHero">City <span>*</span></label>
+              <input type="text" id="cityHero" name="city" class="form-input" required placeholder="e.g. Detroit, Livonia, Canton">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">What size dumpster do you need? <span>*</span></label>
+              <div class="radio-group">
+                <div class="radio-btn-option">
+                  <input type="radio" id="size15Hero" name="dumpster_size_hero" value="15 Yard" required>
+                  <label for="size15Hero">15 Yard</label>
+                </div>
+                <div class="radio-btn-option">
+                  <input type="radio" id="size20Hero" name="dumpster_size_hero" value="20 Yard">
+                  <label for="size20Hero">20 Yard</label>
+                </div>
+                <div class="radio-btn-option">
+                  <input type="radio" id="size30Hero" name="dumpster_size_hero" value="30 Yard">
+                  <label for="size30Hero">30 Yard</label>
+                </div>
+                <div class="radio-btn-option">
+                  <input type="radio" id="size40Hero" name="dumpster_size_hero" value="40 Yard">
+                  <label for="size40Hero">40 Yard</label>
+                </div>
+                <div class="radio-btn-option">
+                  <input type="radio" id="sizeNotsureHero" name="dumpster_size_hero" value="Not Sure">
+                  <label for="sizeNotsureHero">Not sure</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">How soon do you need the dumpster? <span>*</span></label>
+              <div class="radio-group">
+                <div class="radio-btn-option">
+                  <input type="radio" id="timeTodayHero" name="how_soon_hero" value="Today" required>
+                  <label for="timeTodayHero">Today</label>
+                </div>
+                <div class="radio-btn-option">
+                  <input type="radio" id="time3DaysHero" name="how_soon_hero" value="Within 3 days">
+                  <label for="time3DaysHero">Within 3 days</label>
+                </div>
+                <div class="radio-btn-option">
+                  <input type="radio" id="timeWeekHero" name="how_soon_hero" value="Within a week">
+                  <label for="timeWeekHero">Within a week</label>
+                </div>
+                <div class="radio-btn-option">
+                  <input type="radio" id="timeLaterHero" name="how_soon_hero" value="Much later">
+                  <label for="timeLaterHero">Much later</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cloudflare Turnstile Anti-Spam Widget -->
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAERzCayg0G9M4fKH" data-theme="light" data-appearance="interaction-only" style="margin-top:20px; display:flex; justify-content:center;"></div>
+
+            <button type="submit" class="btn btn-green btn-block" style="padding:16px; margin-top:20px; font-size:1rem;">
+              Get Your Dumpster Rental Quote
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PPC TRUST BADGE STRIP ==================== -->
+  <div class="ppc-trust-bar">
+    <div class="container">
+      <div class="ppc-trust-grid">
+        <div class="ppc-trust-item">
+          <svg viewBox="0 0 512 512"><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"/></svg>
+          No Hidden Surcharges
+        </div>
+        <div class="ppc-trust-item">
+          <svg viewBox="0 0 512 512"><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"/></svg>
+          Driveway Safe Wheels
+        </div>
+        <div class="ppc-trust-item">
+          <svg viewBox="0 0 512 512"><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"/></svg>
+          On-Time Guaranteed
+        </div>
+        <div class="ppc-trust-item">
+          <svg viewBox="0 0 512 512"><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"/></svg>
+          5.0 Rating (120+ Google Reviews)
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== ONLINE BOOKING EMBED SECTION ==================== -->
+  <section class="pricing-section" id="pricing-grid" style="padding: 60px 0 80px; background-color: var(--bg-cream);">
+    <div class="container" style="max-width: 1240px; margin: 0 auto;">
+      <div class="section-header" style="text-align: center; margin-bottom: 35px;">
+        <div class="section-subtitle">Instant Online Checkout</div>
+        <h2 class="section-title">Rent Your Dumpster Online In Seconds</h2>
+        <p style="font-size:1.05rem; color:#475569; max-width:700px; margin:12px auto 0;">
+          Select your dumpster size, pick your delivery date, and lock in your flat rate instantly.
+        </p>
+      </div>
+
+      <div style="background: #ffffff; border: 3.5px solid #000000; box-shadow: 8px 8px 0px #000000; border-radius: 12px; overflow: hidden; padding: 15px;">
+        <div class="survcart-embed-presenter" id="y24Fkl9aMh2O1ALa6ZgY" style="width: 100%; min-height: 980px;">
+          <iframe src="https://embed.survcart.com?type=landing&co=N7QRWW7M9sYkyT9vzsV6&wsid=dx9QtVymTA667zSWZvVW&sel=y24Fkl9aMh2O1ALa6ZgY" style="width: 100%; height: 980px; border: none; display: block;" title="Online Dumpster Rental Booking"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS SLIDER ==================== -->
+  <TestimonialSlider />
+
+  <!-- ==================== PHOTO GALLERY & VIDEO ==================== -->
+  <section class="seo-section-cream">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Real Equipment In Action</div>
+        <h2 class="section-title">See Our Fleet Deliveries Across Metro Detroit</h2>
+      </div>
+
+      <div class="photo-gallery-grid">
+        <div class="gallery-card">
+          <img src="/assets/images/20230605_104913.webp" alt="Dumpsters Now Heavy Duty Orange Dumpster On Site" loading="lazy" decoding="async">
+          <div class="gallery-card-body">Heavy-Duty Roll-Off Delivery</div>
+        </div>
+        <div class="gallery-card">
+          <img src="/assets/images/WhatsApp Image 2023-05-06 at 12.53.00 PM.jpeg" alt="Dumpsters Now Residential Driveway Delivery Truck" loading="lazy" decoding="async">
+          <div class="gallery-card-body">Driveway Protection Rubber Wheels</div>
+        </div>
+        <div class="gallery-card">
+          <img src="/assets/images/WhatsApp Image 2023-05-06 at 12.53.15 PM.jpeg" alt="Dumpsters Now Job Site Waste Swap-Out" loading="lazy" decoding="async">
+          <div class="gallery-card-body">Same-Day Job Site Swap-Outs</div>
+        </div>
+      </div>
+
+      <!-- Real Delivery Video -->
+      <div class="video-showcase-container">
+        <video controls poster="/assets/images/20230605_104913.webp" preload="metadata" style="width: 100%; border-radius: 12px; aspect-ratio: 16 / 9; object-fit: cover; background: #000;">
+          <source src="/assets/videos/VID-20260803-WA0006.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== QUOTE FORM SECTION ==================== -->
+  <section class="quote-section" id="bottom-quote-form">
+    <div class="container quote-grid">
+      <div class="quote-info">
+        <div class="section-subtitle">Don't Take Risks With Your Job</div>
+        <h2 class="section-title">Get Your Quality Dumpster Delivered When You Need It</h2>
+        <p class="quote-desc">
+          Skip the middleman call centers and surprise weight fees. Dumpsters Now delivers clean, driveway-safe roll-off containers with transparent flat rates and local phone support.<br><br>
+          <strong>Same-Day Local Dispatch To:</strong> Canton, Westland, Detroit, Livonia, Dearborn, Dearborn Heights, Taylor, Farmington Hills, Redford, Plymouth, Northville, Novi, Garden City, Allen Park, Romulus, Lincoln Park, Wayne, Belleville, Inkster, Southfield, Royal Oak, Ferndale, Trenton, Southgate, Wyandotte &amp; Downriver MI.<br><br>
+          Call (888) 870-9906 or reserve online in under 2 minutes!
+        </p>
+        <div class="google-review-badge">
+          <img src="/assets/images/icons8-google-48.png" alt="Google logo" style="width:36px;">
+          <div>
+            <div class="stars" style="color:var(--star-gold)">★★★★★</div>
+            <div style="font-size:0.85rem; font-weight:700;">5.0 Average on Google Reviews</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-form-card">
+        <h3>One Flat Price. No Hidden Fees. No Weight Surprises.</h3>
+        <p>Lock in your flat-rate delivery date. Same-day &amp; next-day dispatch available across Wayne, Oakland, and Macomb counties.</p>
+
+        <form id="quoteForm">
+          <!-- Invisible Honeypot Anti-Spam Field -->
+          <div style="display:none !important; visibility:hidden !important; position:absolute; left:-9999px;" aria-hidden="true">
+            <input type="text" name="website_hp_check" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="name">Your Name <span>*</span></label>
+            <input type="text" id="name" class="form-input" required placeholder="John Doe">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone Number <span>*</span></label>
+            <input type="tel" id="phone" class="form-input" required placeholder="(888) 870-9906">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="city">City <span>*</span></label>
+            <input type="text" id="city" name="city" class="form-input" required placeholder="e.g. Detroit, Livonia, Canton">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">What size dumpster do you need? <span>*</span></label>
+            <div class="radio-group">
+              <div class="radio-btn-option">
+                <input type="radio" id="size15" name="dumpster_size" value="15 Yard" required>
+                <label for="size15">15 Yard</label>
+              </div>
+              <div class="radio-btn-option">
+                <input type="radio" id="size20" name="dumpster_size" value="20 Yard">
+                <label for="size20">20 Yard</label>
+              </div>
+              <div class="radio-btn-option">
+                <input type="radio" id="size30" name="dumpster_size" value="30 Yard">
+                <label for="size30">30 Yard</label>
+              </div>
+              <div class="radio-btn-option">
+                <input type="radio" id="size40" name="dumpster_size" value="40 Yard">
+                <label for="size40">40 Yard</label>
+              </div>
+              <div class="radio-btn-option">
+                <input type="radio" id="sizeNotsure" name="dumpster_size" value="Not Sure">
+                <label for="sizeNotsure">Not sure</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">How soon do you need the dumpster? <span>*</span></label>
+            <div class="radio-group">
+              <div class="radio-btn-option">
+                <input type="radio" id="timeToday" name="how_soon" value="Today" required>
+                <label for="timeToday">Today</label>
+              </div>
+              <div class="radio-btn-option">
+                <input type="radio" id="time3Days" name="how_soon" value="Within 3 days">
+                <label for="time3Days">Within 3 days</label>
+              </div>
+              <div class="radio-btn-option">
+                <input type="radio" id="timeWeek" name="how_soon" value="Within a week">
+                <label for="timeWeek">Within a week</label>
+              </div>
+              <div class="radio-btn-option">
+                <input type="radio" id="timeLater" name="how_soon" value="Much later">
+                <label for="timeLater">Much later</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cloudflare Turnstile Anti-Spam Widget -->
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAAERzCayg0G9M4fKH" data-theme="light" data-appearance="interaction-only" style="margin-top:20px; display:flex; justify-content:center;"></div>
+
+          <button type="submit" class="btn btn-green btn-block" style="padding:16px; margin-top:20px; font-size:1rem;">
+            Get Your Dumpster Rental Quote
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRE-FOOTER BANNER ==================== -->
+  <section class="pre-footer-banner">
+    <div class="container pre-footer-content">
+      <div class="pre-footer-text">
+        Get a reliable, convenient, and on-time dumpster delivered straight to your driveway.
+      </div>
+      <a href="tel:888-870-9906" class="btn btn-red">Call (888) 870-9906</a>
+    </div>
+  </section>
+
+  <!-- Sticky Mobile Call Bar -->
+  <div class="sticky-call-bar">
+    <a href="tel:888-870-9906" class="sticky-call-btn">
+      CALL (888) 870-9906 TO BOOK BY PHONE
+    </a>
+  </div>
+
+  <!-- ==================== QUOTE MODAL OVERLAY ==================== -->
+  <div class="modal-overlay" id="quoteModalOverlay">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeModalBtn" aria-label="Close modal">&times;</button>
+      <h3 style="font-family:var(--font-heading); font-size:1.4rem; font-weight:900; margin-bottom:6px;">Reserve Your Dumpster</h3>
+      <p style="font-size:0.9rem; color:#475569; margin-bottom:20px;">Complete the form below to lock in flat-rate pricing &amp; fast delivery.</p>
+
+      <form id="modalQuoteForm">
+        <!-- Invisible Honeypot Anti-Spam Field -->
+        <div style="display:none !important; visibility:hidden !important; position:absolute; left:-9999px;" aria-hidden="true">
+          <input type="text" name="website_hp_check" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="nameModal">Your Name <span>*</span></label>
+          <input type="text" id="nameModal" class="form-input" required placeholder="John Doe">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="phoneModal">Phone Number <span>*</span></label>
+          <input type="tel" id="phoneModal" class="form-input" required placeholder="(888) 870-9906">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="cityModal">City <span>*</span></label>
+          <input type="text" id="cityModal" name="city" class="form-input" required placeholder="e.g. Detroit, Livonia, Canton">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">What size dumpster do you need? <span>*</span></label>
+          <div class="radio-group">
+            <div class="radio-btn-option">
+              <input type="radio" id="size15Modal" name="dumpster_size_modal" value="15 Yard" required>
+              <label for="size15Modal">15 Yard</label>
+            </div>
+            <div class="radio-btn-option">
+              <input type="radio" id="size20Modal" name="dumpster_size_modal" value="20 Yard">
+              <label for="size20Modal">20 Yard</label>
+            </div>
+            <div class="radio-btn-option">
+              <input type="radio" id="size30Modal" name="dumpster_size_modal" value="30 Yard">
+              <label for="size30Modal">30 Yard</label>
+            </div>
+            <div class="radio-btn-option">
+              <input type="radio" id="size40Modal" name="dumpster_size_modal" value="40 Yard">
+              <label for="size40Modal">40 Yard</label>
+            </div>
+            <div class="radio-btn-option">
+              <input type="radio" id="sizeNotsureModal" name="dumpster_size_modal" value="Not Sure">
+              <label for="sizeNotsureModal">Not sure</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">How soon do you need the dumpster? <span>*</span></label>
+          <div class="radio-group">
+            <div class="radio-btn-option">
+              <input type="radio" id="timeTodayModal" name="how_soon_modal" value="Today" required>
+              <label for="timeTodayModal">Today</label>
+            </div>
+            <div class="radio-btn-option">
+              <input type="radio" id="time3DaysModal" name="how_soon_modal" value="Within 3 days">
+              <label for="time3DaysModal">Within 3 days</label>
+            </div>
+            <div class="radio-btn-option">
+              <input type="radio" id="timeWeekModal" name="how_soon_modal" value="Within a week">
+              <label for="timeWeekModal">Within a week</label>
+            </div>
+            <div class="radio-btn-option">
+              <input type="radio" id="timeLaterModal" name="how_soon_modal" value="Much later">
+              <label for="timeLaterModal">Much later</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cloudflare Turnstile Anti-Spam Widget -->
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAERzCayg0G9M4fKH" data-theme="light" data-appearance="interaction-only" style="margin-top:15px; display:flex; justify-content:center;"></div>
+
+        <button type="submit" class="btn btn-green btn-block" style="padding:14px; margin-top:15px; font-size:1rem;">
+          Submit &amp; Lock In Flat Rate
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Google Ads Dynamic Geo Location ({loc_physical_ms} & {keyword}) + Headline Replacement Script -->
+  <script is:inline>
+    (function handleDynamicGeoAndHeadline() {
+      try {
+        const params = new URLSearchParams(window.location.search);
+
+        // Official Google Ads Geo Target Criterion IDs (Cities, Townships, Neighborhoods & 480xx-483xx ZIP Codes)
+        const geoByCity = {"Ann Arbor":["1019126","9016851","9016852","9016853","9016854","9016855","9060451","9051512","9189607","9189797","9191296","9191316","9194375","9060452","9211081","9211612","9211884","9216945","9218885","9219668","9221943","9222055"],"Brighton":["1019175","9016858","9016859"],"Canton":["1019192","9016910","9016911"],"Commerce":["1019227","9194069"],"Dearborn":["1019244","9016862","9016864","9016866","9016868"],"Dearborn Heights":["1019245","9016865","9016867"],"Detroit":["1019250","9016920","9016921","9016923","9016924","9016925","9016926","9016927","9016928","9016929","9016930","9016932","9016933","9016934","9016935","9016936","9016938","9016940","9016941","9016942","9016944","9016945","9016946","9016950","9016951","9016954","9060273","9189810","9190762","9191634","9191870","9191896","9192239","9192333","9195456","9193922","9209209","9212650","9217356","9221427","9221478"],"Farmington":["1019282","9016983","9016984"],"Hamtramck":["1019330","9016931"],"Highland":["1019350","9016992","9016993"],"Livonia":["1019419","9016882","9016883","9016884"],"Milan":["1019459","9016888"],"Monroe":["1019465","9052461"],"Lyon":["9052364","1019485","9016892","9231092"],"Novi":["1019496","9017001","9017002","9017003"],"Pinckney":["1019529","9016896"],"Pontiac":["1019536","9016985","9016986","9016987"],"Redford":["1019551","9016955","9016956"],"Romulus":["1019564","9016899","9016957"],"Royal Oak":["1019569","9016823","9016829"],"Saline":["1019573","9016901"],"Southfield":["1019594","9016798","9016799","9016831","9016832"],"Troy":["1019628","9016837","9016838","9016839","9016849"],"Warren":["1019647","9016840","9016841","9016842","9016843","9016844","9189630","9214104","9250530"],"Waterford":["1019650","9016978","9016979","9016980"],"West Bloomfield":["1019657","9016974","9016975","9016976"],"Westland":["1019659","9016908","9016909"],"White Lake":["1019661","9017007","9017008"],"Ypsilanti":["1019672","9016918","9016919","9053228"],"Birmingham":["1019163","9016785"],"Center Line":["1019204","9016787"],"Clawson":["1019216","9016788"],"Eastpointe":["1019266","9016789"],"Bingham Farms":["9191661"],"Franklin":["9016792","1019296"],"Hazel Park":["1019345","9016796"],"Roseville":["1019568","9016822"],"Huntington Woods":["1019366","9016826"],"Madison Heights":["1019426","9016827"],"Berkley":["1019158","9016828"],"Lathrup Village":["9195254"],"St. Clair Shores":["1019603","9016834","9016835","9016836"],"Allen Park":["1019120","9016850"],"Van Buren":["9053044"],"Belleville":["9016857","1019152"],"Chelsea":["1019211","9016861"],"Melvindale":["1019447","9016863"],"Dexter":["1019252","9016869"],"Brownstown":["9051659"],"Flat Rock":["9016872","1019288"],"Garden City":["1019303","9016873"],"Grosse Ile":["1019324","9016875"],"Inkster":["1019370","9016878"],"Lincoln Park":["1019415","9016881"],"New Boston":["9016891","1019481"],"Northville":["1019493","9016894","9016895","9192293","9192160"],"Plymouth":["1019534","9016897","9052692"],"Gibraltar":["9128729"],"Rockwood":["9016898","1019561"],"South Lyon":["1019593","9016902"],"Taylor":["1019619","9016904"],"Woodhaven":["9053202"],"Trenton":["9016906","1019627"],"Wayne":["1019654","9016907","9241574"],"Whitmore Lake":["1019664","9016912"],"Riverview":["9052754","9016916"],"Wyandotte":["9016915","1019670"],"Southgate":["1019595","9016917"],"Superior":["9195435","9261288"],"Highland Park":["1019351","9016922"],"Grosse Pointe Park":["9052074"],"River Rouge":["1019557","9016937"],"Ferndale":["1019285","9016939"],"Harper Woods":["1019335","9016943"],"Ecorse":["9016947","1019270"],"Grosse Pointe Woods":["9052075"],"Grosse Pointe":["9016948","9016952","1019325"],"Oak Park":["1019498","9016953"],"Bloomfield":["9051606","9194452"],"Bloomfield Hills":["9016959","9016960","9016961","1019166"],"Rochester Hills":["9052760","9016965"],"Rochester":["9016963","9016962","1019559"],"Sterling Heights":["1019612","9016966","9016967","9016968","9016969"],"Keego Harbor":["1019388","9016973"],"Auburn Hills":["1019133","9016977"],"Farmington Hills":["9051936","9016981","9016982"],"Clarkston":["9016988","9016989"],"Hartland":["9196452","9016991","1019342"],"Orion":["9052606","9016994","9016995","9016996"],"Milford":["9052438","9017004","9017005","1019460"],"Walled Lake":["1019645","9017009"],"Wixom":["1019668","9017010"],"Howell":["1019363","9017217","9017228"],"Clinton":["1019219","9017384","1019220"],"Huron":["9052175"],"Pittsfield":["9052678"],"Shelby":["9052832","1019586","9228580"],"Holly":["1019354","9017039","9193429"],"Lake Orion":["1019399"],"Oakland":["9052585","9016997"],"Oxford":["9052620","9016999","9017000","1019514"],"Grosse Pointe Farms":["9052073"],"Macomb":["1019425","9016806","9016808"],"Mount Clemens":["1019472","9016807"],"New Baltimore":["1019480","9016810","9016814"],"Romeo":["1019563","9016821"],"Utica":["9016972","1019635"],"Fraser":["1019297","9016793"],"Harrison":["1019337","9016809","1019336"],"Washington":["1019648","9016845","9016846"],"Beverly Hills":["9051595"],"Hamburg":["1019328"],"Pleasant Ridge":["1019533","9016825"]};
+
+        const idToCity = {};
+        const cityNames = Object.keys(geoByCity).sort((a, b) => b.length - a.length);
+        for (const city of cityNames) {
+          for (const id of geoByCity[city]) {
+            idToCity[id] = city;
+          }
+        }
+
+        let resolvedCity = '';
+
+        // 1. Direct ?city= parameter
+        const directCity = params.get('city');
+        if (directCity && directCity.trim()) {
+          resolvedCity = directCity.replace(/[-_]+/g, ' ').trim();
+          resolvedCity = resolvedCity.replace(/\b\w/g, c => c.toUpperCase());
+        }
+
+        // 2. Check {loc_interest_ms} (loci) or {keyword} (kw) for an explicit searched city
+        if (!resolvedCity) {
+          const loci = params.get('loci') || params.get('loc_interest_ms');
+          if (loci && idToCity[loci.trim()]) {
+            resolvedCity = idToCity[loci.trim()];
+          }
+        }
+
+        if (!resolvedCity) {
+          const kw = (params.get('kw') || params.get('keyword') || '').toLowerCase();
+          if (kw) {
+            for (const city of cityNames) {
+              if (kw.includes(city.toLowerCase())) {
+                resolvedCity = city;
+                break;
+              }
+            }
+          }
+        }
+
+        // 3. Method 2: Check {loc_physical_ms} (loc) for searcher's physical Google Geo Criterion ID
+        if (!resolvedCity) {
+          const loc = params.get('loc') || params.get('loc_physical_ms');
+          if (loc && idToCity[loc.trim()]) {
+            resolvedCity = idToCity[loc.trim()];
+          }
+        }
+
+        if (resolvedCity) {
+          document.title = `Same-Day Dumpster Rental in ${resolvedCity}, MI | Flat-Rate Pricing | Dumpsters Now`;
+
+          const headlineEl = document.getElementById('hero-headline');
+          if (headlineEl) {
+            headlineEl.textContent = `Rent A Dumpster In ${resolvedCity}, MI Without Hidden Fees, Surprises, Or Late Delivery`;
+          }
+
+          const bulletEl = document.getElementById('hero-delivery-bullet');
+          if (bulletEl) {
+            bulletEl.innerHTML = `<strong>Same-Day &amp; Next-Day Delivery</strong> Available in ${resolvedCity}, MI &amp; Metro Detroit`;
+          }
+
+          return;
+        }
+
+        // Fallback: Custom ?t= or ?headline= parameter
+        const tag = params.get('t') || params.get('headline') || params.get('h') || params.get('title');
+        if (!tag || !tag.trim()) return;
+        const cleanTag = tag.trim().toLowerCase();
+
+        const presets = {
+          'residential-1': 'Residential Driveway Dumpster Rentals In Metro Detroit',
+          'roofing-1': 'Fast Roofing Shingle Dumpster Rentals In Metro Detroit',
+          'commercial-1': 'Commercial Roll-Off Dumpster Services In Metro Detroit',
+          'yard-1': 'Yard Waste & Landscaping Dumpster Rentals In Metro Detroit',
+          'junk-1': 'Junk Removal & House Cleanout Dumpster Rentals In Metro Detroit'
+        };
+
+        let targetHeadline = presets[cleanTag];
+        if (!targetHeadline) {
+          targetHeadline = tag.replace(/[-_]+/g, ' ').trim();
+          if (targetHeadline === targetHeadline.toLowerCase()) {
+            targetHeadline = targetHeadline.replace(/\b\w/g, c => c.toUpperCase());
+          }
+        }
+
+        if (targetHeadline) {
+          const headlineEl = document.getElementById('hero-headline');
+          if (headlineEl) {
+            headlineEl.textContent = targetHeadline;
+          }
+        }
+      } catch (e) {
+        console.log('Dynamic geo/headline replacement error:', e);
+      }
+    })();
+  </script>
+
+  <!-- Hero Infinite 7-Image Slider Script -->
+  <script is:inline>
+    (function initHeroSlider() {
+      const track = document.getElementById('heroSliderTrack');
+      if (!track) return;
+
+      const slides = track.children;
+      if (slides.length <= 1) return;
+
+      let currentIndex = 0;
+      const totalSlides = slides.length;
+
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }, 3600);
+    })();
+  </script>
+
+  <!-- Survcart JavaScript & CSS Assets -->
+  <link rel="stylesheet" href="https://embed.survcart.com/embed.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="stylesheet" href="https://embed.survcart.com/embed.css" media="all" onload="this.media='all'">
+  <script is:inline src="https://embed.survcart.com/embed.js" type="text/javascript"></script>
+  <script is:inline>
+    var survcartConfig = {
+      "id": "dx9QtVymTA667zSWZvVW",
+      "selectors": [
+        {
+          "ga4_tags": [],
+          "id": "y24Fkl9aMh2O1ALa6ZgY",
+          "classes": "survcart-embed-presenter",
+          "tokens": [
+            "Book Now",
+            "Book Now!",
+            "BOOK NOW",
+            "Book Your Dumpster"
+          ],
+          "configId": "IbwBM279TgS86Rwy5RbH",
+          "workflowId": "gquzISKwhDJWcao6JKAl",
+          "default": true,
+          "ga4_measurement_id": "G-VFVE95PXLY"
+        }
+      ],
+      "companyId": "N7QRWW7M9sYkyT9vzsV6",
+      "embedName": "Embed Configuration 1",
+      "staged": false
+    };
+  </script>
+</BaseLayout>

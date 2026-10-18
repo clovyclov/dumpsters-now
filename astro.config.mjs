@@ -29,7 +29,8 @@ export default defineConfig({
         !page.includes('/thank-you/') &&
         !page.includes('/thank-you-mi/') &&
         !page.includes('/dumpster-rental-mi/') &&
-        !page.includes('/concrete-dumpster-rental-mi/'),
+        !page.includes('/concrete-dumpster-rental-mi/') &&
+        !page.includes('/dumpster-rental-near-you/'),
     }),
   ],
 });

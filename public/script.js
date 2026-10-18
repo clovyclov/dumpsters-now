@@ -310,7 +310,7 @@ function initQuoteForm() {
           window.location.href = '../thank-you/';
           return;
         }
-        if (currentUrl.includes('dumpster-rental-mi')) {
+        if (currentUrl.includes('dumpster-rental-mi') || currentUrl.includes('dumpster-rental-near-you')) {
           window.location.href = '../book-online-mi/';
           return;
         }
